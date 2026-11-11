@@ -1,11 +1,11 @@
 {
-  "name": "J16-MBDL4 V0.2",
+  "name": "J16-MBDL4 V0.3",
   "owner_uuid": "9cc553c739c8405bb4e2f8f03699cd23",
   "creator_uuid": "9cc553c739c8405bb4e2f8f03699cd23",
   "created_at": "2026-11-11 22:37:45",
   "updated_at": "2026-11-11 22:37:45",
   "modifier_uuid": "9cc553c739c8405bb4e2f8f03699cd23",
-  "content": "SCH-01 Issue 3 原理图审查",
+  "content": "V0.3 J16—MBDL4 兼容接口板样机，单页A3原理图与双层PCB",
   "archive": false,
   "cbb_project": 0,
   "thumb": "",
@@ -31,8 +31,8 @@
         "name": "J16-MBDL4",
         "board": "00aab8b9f495a1dd",
         "source": "",
-        "version": "1794415160632",
-        "updateTime": 1794415160632
+        "version": "1794419279034",
+        "updateTime": 1794419279034
       }
     },
     "sheets": {
@@ -42,8 +42,8 @@
         "schematic_uuid": "fb37557aba75df82",
         "zIndex": 5,
         "source": "",
-        "version": "1794415160632",
-        "updateTime": 1794415160632
+        "version": "1794419279034",
+        "updateTime": 1794419279034
       }
     },
     "pcbs": {
@@ -53,8 +53,8 @@
         "board": "00aab8b9f495a1dd",
         "parent_uuid": "",
         "source": "",
-        "version": "1794407875548",
-        "updateTime": 1794407875548
+        "version": "1794420728332",
+        "updateTime": 1794420728332
       }
     },
     "panels": {

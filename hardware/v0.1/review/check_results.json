@@ -1,36 +1,85 @@
 {
-  "revision": "V0.2 A3 review",
+  "revision": "V0.3 compatibility prototype",
+  "baselineCommit": "ef5a1906e9a2a961c73f60f2522a7a77d5fe585a",
+  "checkedUtc": "2026-11-11T18:20:14Z",
   "schematicPages": 1,
+  "components": 51,
+  "terminals": 232,
+  "connectedTerminals": 194,
   "noConnectTerminals": 38,
-  "reopenedEditableProjectVerified": true,
-  "components": 53,
-  "terminals": 236,
-  "connectedTerminals": 198,
-  "namedNets": 44,
-  "terminalMappingDifferences": [],
+  "namedNets": 42,
   "singleTerminalNets": [],
+  "terminalMappingDifferences": [],
+  "pcbPadMappingDifferences": [],
+  "reopenedEditableSchematicAndPcbVerified": true,
   "erc": {
-    "tool": "JLCEDA native SCH_Drc.check(true,false,true)",
+    "tool": "JLCEDA 4.1.99 sch_Drc.check(true,false,true)",
     "errors": 0,
     "warnings": 0,
     "rawResult": []
   },
-  "electricalReview": {
-    "status": "blocked",
-    "keyIssue": "PWM recommended input current 7–16mA is not guaranteed by the fixed MBDL4 300-ohm/1k input network and current 5V drive. Two independent review rounds retain the issue.",
-    "feedbackRatedConditions": {
-      "fpgaVccoV": [
-        3,
-        3.4
-      ],
-      "maxFrequencyHz": 100000,
-      "minAdjacentAbEdgeIntervalUs": 2,
-      "maxASideLoadPf": 50,
-      "initializationWaitMs": 1
-    }
-  },
   "pcbDrc": {
-    "executed": false,
-    "reason": "Schematic key electrical issue remains unresolved. PCB document retains its original empty state."
+    "executed": true,
+    "tool": "JLCEDA 4.1.99 pcb_Drc.check(true,false,true)",
+    "rule": "JLCPCB Capability(Two Layers Board)",
+    "errors": 0,
+    "warnings": 0,
+    "rawResult": [],
+    "unroutedConnections": 0
+  },
+  "pcb": {
+    "widthMm": 60,
+    "heightMm": 55,
+    "copperLayers": 2,
+    "nominalBoardThicknessMm": 1.6,
+    "components": 51,
+    "pads": 232,
+    "vias": 40,
+    "filledGndRegions": 2,
+    "connectorDrillsMm": {
+      "J1": 1.1,
+      "J2": 1
+    },
+    "viaDrillsMm": [
+      0.3048,
+      0.30505
+    ],
+    "decouplingPowerPadToIcPinDistanceMm": [
+      1.225,
+      1.72
+    ],
+    "outlineBasis": "This board design dimensions",
+    "externalAssemblyClearance": "Pending fit check"
+  },
+  "independentReadOnlyReview": {
+    "schematicAndConnectivity": "No remaining required changes for the requested compatibility prototype",
+    "pcbImagesAndSources": "Final top, bottom and both 3D views inspected; reported silkscreen corrections completed"
+  },
+  "benchValidation": {
+    "performed": false,
+    "items": [
+      "PWM loaded high/low voltage, optocoupler current, pulse width and shutdown",
+      "Feedback high voltage and edges with actual encoder and cable",
+      "OE turnoff and pin injection during independent core VCCO drop",
+      "Reset and enable initialization sequence"
+    ]
+  },
+  "fabrication": {
+    "nativeGerberExport": true,
+    "closedOutlineMm": [
+      60,
+      55
+    ],
+    "combinedThroughDrillCount": 106,
+    "viaClassificationDrillCount": 40,
+    "drillImportNote": "Drill_PTH_Through.DRL already includes vias; import combined drill once"
+  },
+  "schematicPdf": {
+    "pages": 1,
+    "sizeMm": [
+      420,
+      297
+    ],
+    "source": "Native 4096px PNG fitted proportionally"
   }
 }
