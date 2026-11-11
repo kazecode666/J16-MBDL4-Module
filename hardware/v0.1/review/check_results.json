@@ -1,0 +1,36 @@
+{
+  "revision": "V0.2 A3 review",
+  "schematicPages": 1,
+  "noConnectTerminals": 38,
+  "reopenedEditableProjectVerified": true,
+  "components": 53,
+  "terminals": 236,
+  "connectedTerminals": 198,
+  "namedNets": 44,
+  "terminalMappingDifferences": [],
+  "singleTerminalNets": [],
+  "erc": {
+    "tool": "JLCEDA native SCH_Drc.check(true,false,true)",
+    "errors": 0,
+    "warnings": 0,
+    "rawResult": []
+  },
+  "electricalReview": {
+    "status": "blocked",
+    "keyIssue": "PWM recommended input current 7–16mA is not guaranteed by the fixed MBDL4 300-ohm/1k input network and current 5V drive. Two independent review rounds retain the issue.",
+    "feedbackRatedConditions": {
+      "fpgaVccoV": [
+        3,
+        3.4
+      ],
+      "maxFrequencyHz": 100000,
+      "minAdjacentAbEdgeIntervalUs": 2,
+      "maxASideLoadPf": 50,
+      "initializationWaitMs": 1
+    }
+  },
+  "pcbDrc": {
+    "executed": false,
+    "reason": "Schematic key electrical issue remains unresolved. PCB document retains its original empty state."
+  }
+}

@@ -1,6 +1,6 @@
 # 设计依据
 
-本轮按 [Issue #3](https://github.com/kazecode666/J16-MBDL4-Module/issues/3) 最新正文完成原理图 V0.1。已有资料文件与关键页码见[参考索引](reference_index.md)，原始接口事实见[接口证据](interface_evidence.md)。
+本轮按 [Issue #3](https://github.com/kazecode666/J16-MBDL4-Module/issues/3) 最新正文完成原理图，并按 PR #4 评论重排为单页 A3 V0.2。已有资料文件与关键页码见[参考索引](reference_index.md)，原始接口事实见[接口证据](interface_evidence.md)。
 
 ## 用户确定的边界
 
@@ -19,8 +19,8 @@
 - TI 手册 p3 核验 PW/TSSOP-24 引脚。1 为 VCCA，23、24 均为 VCCB，11–13 为 GND。新器件使用 A1–A8/B1–B8 通道编号。
 - TI 手册 p19–22 给出 OE、DIR 和掉电隔离行为，p24 给出去耦建议。封装图 PW0024A p1–3 提供外形、焊盘与钢网尺寸。
 
-## V0.1 的实际连接
+## 当前实际连接
 
-U1、U2 的 DIR 接 VCCA，两个 OE 独立控制并有外部上拉。U3 的 DIR 接 GND，反馈使能保持独立于 PWM 停机。完整供电、使能、必要偏置与未用输入处理以[原理图说明](schematic_v0.1.md)和可编辑工程为准。
+U1、U2 的 DIR 接 VCCA，两个 OE 独立控制并有外部上拉。U3 的 DIR 接 GND，VCCA 由 CTRL_EN 经 470 Ω 供给，五路 A 输出经 33 Ω 串联至 FPGA。反馈有效条件保持独立于 PWM 停机。完整供电、使能、必要偏置与未用输入处理以[原理图说明](schematic_v0.1.md)和可编辑工程为准。
 
 [连接表](../hardware/v0.1/pin_connections.csv)记录 J16 针号/FPGA 球号、转换器真实引脚和 MBDL4 针号，[BOM](../hardware/v0.1/bom.csv)记录所用元件。原理图审查集中于[当前电气事项](open_questions.md)。
