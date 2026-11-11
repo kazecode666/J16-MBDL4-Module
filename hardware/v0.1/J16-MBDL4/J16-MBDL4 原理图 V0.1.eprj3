@@ -1,0 +1,123 @@
+{
+  "name": "J16-MBDL4 原理图 V0.1",
+  "owner_uuid": "9cc553c739c8405bb4e2f8f03699cd23",
+  "creator_uuid": "9cc553c739c8405bb4e2f8f03699cd23",
+  "created_at": "2026-11-11 22:37:45",
+  "updated_at": "2026-11-11 22:37:45",
+  "modifier_uuid": "9cc553c739c8405bb4e2f8f03699cd23",
+  "content": "SCH-01 Issue 3 原理图审查",
+  "archive": false,
+  "cbb_project": 0,
+  "thumb": "",
+  "ticket": 1,
+  "g_ticket": 1,
+  "boards": [],
+  "block_symbol_attrs_groups": {},
+  "default_sheet": "aff8d9bc23158916",
+  "branch_uuid": "",
+  "pcb_count": 0,
+  "format": "folder",
+  "profile": {
+    "boards": {
+      "00aab8b9f495a1dd": {
+        "uuid": "00aab8b9f495a1dd",
+        "title": "Board1",
+        "zIndex": 1
+      }
+    },
+    "schematics": {
+      "fb37557aba75df82": {
+        "uuid": "fb37557aba75df82",
+        "name": "J16-MBDL4",
+        "board": "00aab8b9f495a1dd",
+        "source": "",
+        "version": "1794409295371",
+        "updateTime": 1794409295371
+      }
+    },
+    "sheets": {
+      "ebbf74e58df315d7": {
+        "uuid": "ebbf74e58df315d7",
+        "title": "01_接口与供电",
+        "schematic_uuid": "fb37557aba75df82",
+        "zIndex": 1,
+        "source": "",
+        "version": "1794409232959",
+        "updateTime": 1794409232959
+      },
+      "d6b794216a574b03": {
+        "uuid": "d6b794216a574b03",
+        "title": "02_PWM",
+        "schematic_uuid": "fb37557aba75df82",
+        "zIndex": 2,
+        "source": "",
+        "version": "1794409294151",
+        "updateTime": 1794409294151
+      },
+      "9ef5c963de33d311": {
+        "uuid": "9ef5c963de33d311",
+        "title": "03_控制",
+        "schematic_uuid": "fb37557aba75df82",
+        "zIndex": 3,
+        "source": "",
+        "version": "1794409295371",
+        "updateTime": 1794409295371
+      },
+      "8d84047249ff492a": {
+        "uuid": "8d84047249ff492a",
+        "title": "04_反馈",
+        "schematic_uuid": "fb37557aba75df82",
+        "zIndex": 4,
+        "source": "",
+        "version": "1794409234269",
+        "updateTime": 1794409234269
+      }
+    },
+    "pcbs": {
+      "a5268c55721b527f": {
+        "uuid": "a5268c55721b527f",
+        "title": "PCB1",
+        "board": "00aab8b9f495a1dd",
+        "parent_uuid": "",
+        "source": "",
+        "version": "1794407875548",
+        "updateTime": 1794407875548
+      }
+    },
+    "panels": {
+      "4f935a7365182bb2": {
+        "uuid": "4f935a7365182bb2",
+        "title": "Panel1",
+        "zIndex": null
+      }
+    },
+    "blockSymbols": {},
+    "owner": {
+      "uuid": "9cc553c739c8405bb4e2f8f03699cd23"
+    },
+    "simSchematics": {},
+    "simulations": {}
+  },
+  "config": {
+    "defaultSheet": "aff8d9bc23158916",
+    "settings": {
+      "UNIVERSAL": {
+        "dataType": "UNIVERSAL",
+        "data": {
+          "allowLibRename": true,
+          "defaultNetName": true,
+          "wireMultipleNet": true,
+          "netFlagCrossLayerConnection": true,
+          "netLabelCrossPageConnection": true,
+          "busGenerateNetClass": true,
+          "relevanceDisplayRow": "SINGLE",
+          "relevanceBelongSchPage": "NAME",
+          "relevanceLocation": "ZONE",
+          "multipartCrossLayer": true,
+          "nonElectronicAddIntoBom": false,
+          "nonElectronicUpdatePcb": false
+        }
+      }
+    }
+  }
+}

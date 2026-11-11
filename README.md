@@ -1,12 +1,14 @@
 # J16—MBDL4 数字接口板
 
-为 AXU5EVB-E J16 与 MBDL4 建立专用数字接口板设计依据。当前阶段为 DOC-01 资料基线，正式设计仍需解决已登记的电气与版本问题。
+AXU5EVB-E J16—MBDL4 专用数字接口板，当前进行 SCH-01 原理图 V0.1 审查。
 
-- [设计依据](docs/design_basis.md)
-- [逐份资料索引与 SHA-256](docs/reference_index.md)
-- [接口证据及原始页码](docs/interface_evidence.md)
-- [下一步原理图的待确认项](docs/open_questions.md)
+- [原理图工程与审查图片](hardware/v0.1/)
+- [引脚连接表](hardware/v0.1/pin_connections.csv)
+- [初版 BOM](hardware/v0.1/bom.csv)
+- [供电、OE 与默认状态说明](docs/schematic_v0.1.md)
+- [设计依据](docs/design_basis.md)、[参考资料索引](docs/reference_index.md)、[接口证据](docs/interface_evidence.md)
+- [原理图审查项](docs/open_questions.md)
 
-本轮完成资料复制、版本区分、证据提取和缺件登记。原件归档于 Git 忽略的 `.local/references/`，精确本地来源见 `.local/manifest.json`。公开仓库仅提交原创摘要和来源索引。ALINX 原理图带 Confidential 标记，TI 文件含再发布限制，其余厂家资料的公开授权尚未取得。
+按 [Issue #3](https://github.com/kazecode666/J16-MBDL4-Module/issues/3) 使用嘉立创 EDA 完成本轮设计，从最新 main 建立分支，通过 Draft PR 提交原理图审查。接口板仅经 J16 与控制器插接。PCB 布线与下单留待原理图确认后进行。
 
-对应 [Issue #1](https://github.com/kazecode666/J16-MBDL4-Module/issues/1)，分支 `docs/reference-baseline`。2026-11-11 核查远端为空，已用最小 README 和 .gitignore 建立 main 初始提交 `36e2d06`。资料整理通过 Draft PR 交付，合并由用户决定。
+既有厂家原件保存在 Git 忽略的 `.local/references/`。公开权限不明的原件继续仅保留本地，仓库提供必要来源与页码。
