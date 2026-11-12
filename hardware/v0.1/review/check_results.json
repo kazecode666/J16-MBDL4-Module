@@ -1,7 +1,9 @@
 {
-  "revision": "V0.3 compatibility prototype",
+  "revision": "V0.3 closeout on user-arranged A3 schematic",
   "baselineCommit": "ef5a1906e9a2a961c73f60f2522a7a77d5fe585a",
-  "checkedUtc": "2026-11-11T18:20:14Z",
+  "workingBaselineCommit": "e4c6efa1022eb6a5240dc99f40bc5773231a872a",
+  "reviewCommentId": 6821783281,
+  "checkedUtc": "2026-11-12T11:52:07.654Z",
   "schematicPages": 1,
   "components": 51,
   "terminals": 232,
@@ -11,7 +13,8 @@
   "singleTerminalNets": [],
   "terminalMappingDifferences": [],
   "pcbPadMappingDifferences": [],
-  "reopenedEditableSchematicAndPcbVerified": true,
+  "manualInputTerminalMappingDifferences": [],
+  "userSchematicLayout": "All 51 component positions retained; C7 orientation normalized; local power/GND wiring and annotations updated",
   "erc": {
     "tool": "JLCEDA 4.1.99 sch_Drc.check(true,false,true)",
     "errors": 0,
@@ -35,6 +38,7 @@
     "components": 51,
     "pads": 232,
     "vias": 40,
+    "tracks": 523,
     "filledGndRegions": 2,
     "connectorDrillsMm": {
       "J1": 1.1,
@@ -44,16 +48,42 @@
       0.3048,
       0.30505
     ],
-    "decouplingPowerPadToIcPinDistanceMm": [
-      1.225,
+    "decouplingPowerTrackLengthMm": [
+      1.23,
       1.72
+    ],
+    "decouplingGroundViaDistanceMm": 0.8,
+    "u3OutputToSeriesResistorTrackLengthsMm": [
+      8.099,
+      6.743,
+      5.977,
+      6.723,
+      7.489
     ],
     "outlineBasis": "This board design dimensions",
     "externalAssemblyClearance": "Pending fit check"
   },
+  "pcbSchematicSynchronization": {
+    "importChanges": true,
+    "padNetDifferences": [],
+    "physicalGeometryComparedWithInput": true,
+    "physicalGeometryDifferences": [],
+    "metadataChanges": "Schematic Channel ID and equivalent C1/C4/C7 270deg to -90deg rotation representation",
+    "existingPreviewImages": "Top, bottom and both 3D previews retained after physical geometry equivalence check"
+  },
+  "probePoints": {
+    "+3V3_A": "C10.1",
+    "+5V_B": "C11.1",
+    "GND": "C10.2",
+    "OE_PWM_N": "R13.2",
+    "OE_CTRL_N": "R19.2",
+    "F_RESET_B": "J2.9",
+    "ERRI_B": "J2.19",
+    "ERRU_B": "J2.20"
+  },
   "independentReadOnlyReview": {
-    "schematicAndConnectivity": "No remaining required changes for the requested compatibility prototype",
-    "pcbImagesAndSources": "Final top, bottom and both 3D views inspected; reported silkscreen corrections completed"
+    "schematicAndConnectivity": "New native PNG and SVG inspected; local decoupling, grouped grounds, reset/fault notes and probe locations reviewed; no remaining necessary changes",
+    "pcbImagesAndSources": "Existing top/bottom images and source inspected; input/current physical geometry equivalent; accessible top-side probe pads confirmed"
   },
   "benchValidation": {
     "performed": false,
@@ -61,7 +91,7 @@
       "PWM loaded high/low voltage, optocoupler current, pulse width and shutdown",
       "Feedback high voltage and edges with actual encoder and cable",
       "OE turnoff and pin injection during independent core VCCO drop",
-      "Reset and enable initialization sequence"
+      "Reset, fault latch clear and enable initialization sequence"
     ]
   },
   "fabrication": {
@@ -80,6 +110,8 @@
       420,
       297
     ],
-    "source": "Native 4096px PNG fitted proportionally"
+    "source": "Native 4096px PNG fitted proportionally",
+    "nativeSvgAlsoDelivered": true,
+    "vectorConversionIssue": "SVG-to-PDF text baseline conversion displaced title-block text; review PDF uses native PNG"
   }
 }
