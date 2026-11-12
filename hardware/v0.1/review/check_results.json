@@ -1,9 +1,9 @@
 {
-  "revision": "V0.3 independent VCC and decoupling branches",
+  "revision": "V0.3 capacitor spacing, upward U3 DIR ground and grouped IC supplies",
   "baselineCommit": "ef5a1906e9a2a961c73f60f2522a7a77d5fe585a",
-  "workingBaselineCommit": "b87f42d3094c00d8fd396dab097f1342517a00af",
+  "workingBaselineCommit": "e5222b291c25a83b91719f2ed8915b476601e626",
   "reviewCommentId": 6821783281,
-  "checkedUtc": "2026-11-12T12:14:12.420Z",
+  "checkedUtc": "2026-11-12T12:22:21.909Z",
   "schematicPages": 1,
   "components": 51,
   "terminals": 232,
@@ -14,7 +14,7 @@
   "terminalMappingDifferences": [],
   "pcbPadMappingDifferences": [],
   "manualInputTerminalMappingDifferences": [],
-  "userSchematicLayout": "Each decoupling capacitor and IC power pin drawn with an independent supply stub; each capacitor including C10/C11 has a separate GND symbol; pull-down and IC ground pins remain locally grouped",
+  "userSchematicLayout": "C1-C3 and C7-C9 moved upward 35 drawing units; C4-C6 moved upward 15 units; U3 DIR ground points upward; same-supply IC pins locally grouped with real power net flags",
   "erc": {
     "tool": "JLCEDA 4.1.99 sch_Drc.check(true,false,true)",
     "errors": 0,
@@ -68,7 +68,7 @@
     "padNetDifferences": [],
     "physicalGeometryComparedWithInput": true,
     "physicalGeometryDifferences": [],
-    "metadataChanges": "Saved metadata and 16 schematic Channel IDs",
+    "metadataChanges": "None; all 2342 PCB source records match the current input snapshot",
     "existingPreviewImages": "Top, bottom and both 3D previews retained after physical geometry equivalence check"
   },
   "probePoints": {
@@ -82,7 +82,7 @@
     "ERRU_B": "J2.20"
   },
   "independentReadOnlyReview": {
-    "schematicAndConnectivity": "Release PNG inspected; DIR power labels, C8 GND, U3 DIR GND and J1.39/40 net labels have clear spacing; no remaining necessary drawing changes",
+    "schematicAndConnectivity": "Latest native PNG inspected; capacitor spacing, upward U3 DIR GND and same-supply pin grouping are clear",
     "pcbImagesAndSources": "Existing top/bottom images and source inspected; input/current physical geometry equivalent; accessible top-side probe pads confirmed"
   },
   "benchValidation": {
@@ -102,7 +102,8 @@
     ],
     "combinedThroughDrillCount": 106,
     "viaClassificationDrillCount": 40,
-    "drillImportNote": "Drill_PTH_Through.DRL already includes vias; import combined drill once"
+    "drillImportNote": "Drill_PTH_Through.DRL already includes vias; import combined drill once",
+    "existingGerberMatchesUnchangedPcb": true
   },
   "schematicPdf": {
     "pages": 1,
