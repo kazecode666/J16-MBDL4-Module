@@ -1,20 +1,18 @@
 {
-  "revision": "V0.3 capacitor spacing, upward U3 DIR ground and grouped IC supplies",
-  "baselineCommit": "ef5a1906e9a2a961c73f60f2522a7a77d5fe585a",
-  "workingBaselineCommit": "e5222b291c25a83b91719f2ed8915b476601e626",
-  "reviewCommentId": 6821783281,
-  "checkedUtc": "2026-11-12T12:22:21.909Z",
+  "revision": "V0.3 checklist25 connector and manufacturing review",
+  "workingBaselineCommit": "5622d723678aabfbb25a1281caaadcfec4442f0a",
+  "reviewCommentId": 6824768128,
+  "schematicCheckedUtc": "2026-11-12T14:39:48.167Z",
+  "pcbCheckedUtc": "2026-11-12T14:40:21.169Z",
   "schematicPages": 1,
   "components": 51,
   "terminals": 232,
   "connectedTerminals": 194,
   "noConnectTerminals": 38,
   "namedNets": 42,
-  "singleTerminalNets": [],
   "terminalMappingDifferences": [],
   "pcbPadMappingDifferences": [],
-  "manualInputTerminalMappingDifferences": [],
-  "userSchematicLayout": "C1-C3 and C7-C9 moved upward 35 drawing units; C4-C6 moved upward 15 units; U3 DIR ground points upward; same-supply IC pins locally grouped with real power net flags",
+  "schematicComponentLayoutDifferences": [],
   "erc": {
     "tool": "JLCEDA 4.1.99 sch_Drc.check(true,false,true)",
     "errors": 0,
@@ -22,97 +20,106 @@
     "rawResult": []
   },
   "pcbDrc": {
-    "executed": true,
     "tool": "JLCEDA 4.1.99 pcb_Drc.check(true,false,true)",
     "rule": "JLCPCB Capability(Two Layers Board)",
     "errors": 0,
     "warnings": 0,
     "rawResult": [],
-    "unroutedConnections": 0
+    "unroutedConnections": 0,
+    "rawRatlines": {
+      "items": [],
+      "hasMore": false,
+      "total": 0
+    }
   },
   "pcb": {
     "widthMm": 60,
     "heightMm": 55,
     "copperLayers": 2,
-    "nominalBoardThicknessMm": 1.6,
+    "nominalThicknessMm": 1.6,
     "components": 51,
     "pads": 232,
     "vias": 40,
-    "tracks": 523,
-    "filledGndRegions": 2,
-    "connectorDrillsMm": {
-      "J1": 1.1,
-      "J2": 1
+    "repoured": true,
+    "j1": {
+      "mpn": "SFH11-PBPC-D20-ST-BK",
+      "lcsc": "C5909928",
+      "layer": "Bottom",
+      "rotationDegrees": 180,
+      "pads": 40,
+      "drillMm": 1.02,
+      "padDiameterMm": 1.5,
+      "nominalAnnularRingMm": 0.24,
+      "pinRenumbered": false
     },
-    "viaDrillsMm": [
-      0.3048,
-      0.30505
-    ],
-    "decouplingPowerTrackLengthMm": [
-      1.23,
-      1.72
-    ],
-    "decouplingGroundViaDistanceMm": 0.8,
-    "u3OutputToSeriesResistorTrackLengthsMm": [
-      8.099,
-      6.743,
-      5.977,
-      6.723,
-      7.489
-    ],
-    "outlineBasis": "This board design dimensions",
-    "externalAssemblyClearance": "Pending fit check"
+    "j2": {
+      "mpn": "HX JN2.54-2x13P ZZ H8.9",
+      "lcsc": "C42455950",
+      "layer": "Top",
+      "rotationDegrees": 0,
+      "pads": 26,
+      "drillMm": 1.02001,
+      "circularPadDiameterMm": 1.6,
+      "nominalAnnularRingMm": 0.29,
+      "keySlotSilkscreenMm": 4.5
+    },
+    "entryCapMoveMm": 1,
+    "entryCapToJ1CopperClearanceMm": {
+      "C10": 1.3876,
+      "C11": 1.38
+    },
+    "minimumSmallComponentBodyClearanceMm": 0.82,
+    "copperToBoardEdgeMinimumMm": 0.5,
+    "drillEdgeSpacingMinimumMm": 0.84785,
+    "drillEdgeToBoardMinimumMm": 3.22
   },
-  "pcbSchematicSynchronization": {
-    "importChanges": true,
-    "padNetDifferences": [],
-    "physicalGeometryComparedWithInput": true,
-    "physicalGeometryDifferences": [],
-    "metadataChanges": "None; all 2342 PCB source records match the current input snapshot",
-    "existingPreviewImages": "Top, bottom and both 3D previews retained after physical geometry equivalence check"
-  },
-  "probePoints": {
-    "+3V3_A": "C10.1",
-    "+5V_B": "C11.1",
-    "GND": "C10.2",
-    "OE_PWM_N": "R13.2",
-    "OE_CTRL_N": "R19.2",
-    "F_RESET_B": "J2.9",
-    "ERRI_B": "J2.19",
-    "ERRU_B": "J2.20"
-  },
-  "independentReadOnlyReview": {
-    "schematicAndConnectivity": "Latest native PNG inspected; capacitor spacing, upward U3 DIR GND and same-supply pin grouping are clear",
-    "pcbImagesAndSources": "Existing top/bottom images and source inspected; input/current physical geometry equivalent; accessible top-side probe pads confirmed"
-  },
-  "benchValidation": {
-    "performed": false,
-    "items": [
-      "PWM loaded high/low voltage, optocoupler current, pulse width and shutdown",
-      "Feedback high voltage and edges with actual encoder and cable",
-      "OE turnoff and pin injection during independent core VCCO drop",
-      "Reset, fault latch clear and enable initialization sequence"
+  "independentReview": {
+    "actualSchematicPngViewed": true,
+    "actualPcbPngViewed": true,
+    "actual3dPreviewsViewed": true,
+    "readOnlyAgents": true,
+    "edaEditsByMainAgentOnly": true,
+    "findingsFixed": [
+      "J1 bottom silk moved outside housing and key",
+      "project device model associations and transforms corrected",
+      "J2 key slot silkscreen corrected to 4.5mm"
     ]
   },
-  "fabrication": {
-    "nativeGerberExport": true,
+  "manufacturingReview": {
+    "actualGerberIndependentlyParsed": true,
     "closedOutlineMm": [
       60,
       55
     ],
-    "combinedThroughDrillCount": 106,
-    "viaClassificationDrillCount": 40,
-    "drillImportNote": "Drill_PTH_Through.DRL already includes vias; import combined drill once",
-    "existingGerberMatchesUnchangedPcb": true
+    "combinedPthHoles": 106,
+    "viaSubsetHoles": 40,
+    "combinedDrillIncludesVias": true,
+    "topSmdPastePads": 166,
+    "thtPastePads": 0,
+    "tentedVias": 40,
+    "tssopCopperGapMm": 0.286,
+    "tssopMaskBridgeMm": 0.1844,
+    "nativeHoleToGerberCenterMaxDifferenceMm": 0.000185,
+    "smallCopperIslandsBelow0p01Mm2Found": false,
+    "solderMaskColor": "not specified",
+    "surfaceFinish": "not specified",
+    "assemblyMethod": "not selected"
   },
-  "schematicPdf": {
-    "pages": 1,
-    "sizeMm": [
-      420,
-      297
-    ],
-    "source": "Native 4096px PNG fitted proportionally",
-    "nativeSvgAlsoDelivered": true,
-    "vectorConversionIssue": "SVG-to-PDF text baseline conversion displaced title-block text; review PDF uses native PNG"
-  }
+  "exports": {
+    "schematicPdf": "one landscape A3 page from native 4096px PNG",
+    "schematicSvg": "native editable vector export",
+    "pcbLayerImages": "native MCP canvas exports in top-view coordinates",
+    "modelImages": "offline z-buffer rendering of actual native MCP OBJ export; native ray-tracer init timed out"
+  },
+  "pending": [
+    "Q1/Q2 exact manufacturer B/E/C pin drawing",
+    "AXU J16 internal dimensions, exposed pin length and connector pin-1 mating orientation",
+    "J2 and keyed IDC cable female contact overlap and insertion depth",
+    "AXU5EVB-E plus AN9238 simultaneous XY/Z installation and cable/heatsink envelopes",
+    "mechanical support under connector insertion forces",
+    "solder mask color, surface finish and assembly method",
+    "external analog harness and labels",
+    "future no-power bench measurements"
+  ],
+  "checklist": "docs/review_checklist.md"
 }

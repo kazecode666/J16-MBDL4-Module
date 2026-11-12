@@ -8,7 +8,8 @@ AXU5EVB-E J16—MBDL4 专用 3.3 V/5 V 数字接口板，V0.3 交付单页 A3 �
 - [供电、OE 与默认状态](docs/schematic_v0.1.md)
 - [设计依据](docs/design_basis.md)、[参考资料索引](docs/reference_index.md)、[接口证据](docs/interface_evidence.md)
 - [样机待验证项目](docs/open_questions.md)
+- [25项统一审查清单](docs/review_checklist.md)
 
-本轮以 `e4c6efa` 和用户手工整理的当前图面为基础，在同一 [Draft PR #4](https://github.com/kazecode666/J16-MBDL4-Module/pull/4) 中完成收尾。三颗 SN74LXC8T245 正常供电，U1 独立 PWM_EN，U2/U3 共用 CTRL_EN，沿用原 28335BPLUS 直接 5 V 转换方案。去耦支路、局部地线及复位/故障注释已完善，带载与掉电瞬态测量留待无功率接口联调。
+本轮以 `5622d72` 和用户保存的当前工程为基础，在同一Draft PR #4中按25项清单修订连接器、入口电容间距及丝印，更新实际检查与制造文件。三颗SN74LXC8T245正常供电，U1独立PWM_EN，U2/U3共用CTRL_EN，沿用原28335BPLUS直接5V转换方案。连接器实体插合、同装空间与实机项目的待办详见清单。[Draft PR #4](https://github.com/kazecode666/J16-MBDL4-Module/pull/4)
 
 厂家原件保存在 Git 忽略的 `.local/references/`。公开权限不明的原件继续仅保留本地，仓库提供必要来源与页码。

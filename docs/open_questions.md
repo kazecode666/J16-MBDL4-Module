@@ -5,5 +5,6 @@
 - J16 电源持续存在、核心 VCCO 单独骤降时，检查 OE 关断过程及 FPGA 引脚注入。CTRL_EN 仅表示软件使能。
 - 核对 F_Reset 空闲高、低→高清锁存及 OE 切换边沿。初始化先 PWM_EN=0、RELCON/ENCON=0、F_RESET=1，再 CTRL_EN=1 读取反馈。清故障先撤销运行请求并消除故障原因，再发复位沿、检查 ERRI/ERRU，由 PWM_EN 独立放行。切换 CTRL_EN 前恢复 F_Reset 空闲高。
 - 60 × 55 mm 为本板设计尺寸。J1/J2 使用资料中的 2.54 mm 脚距与端子映射，叠合净高、散热器避让及固定方式仍需装配核对。
+- 本轮连接器插合、AN9238同装空间、Q1/Q2厂家引脚资料、装配方式及工艺选项的具体待办见[25项审查清单](review_checklist.md)。
 
 测量可使用现有 C10/C11、R13/R19 和 J2 焊盘，定位见[设计说明](schematic_v0.1.md)。以上实物测量和机械装配项目尚未执行。当前原理图与 PCB 的实际检查结果见[交付检查结果](../hardware/v0.1/review/check_results.json)。
