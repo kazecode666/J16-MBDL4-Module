@@ -6,7 +6,7 @@
 
 - J1 对接 AXU5EVB-E J16，2 脚供 5 V，39/40 脚供 3.3 V，1/37/38 脚为 GND。J2 对接 MBDL4 数字口，25/26 脚连接驱动板控制侧 GND。+5V_B 仅由 J16 供本板 B 侧，保持与驱动板内部 5V、DVDD5.0 独立。MOT_GND、24V−、编码器隔离侧 DGND 保持原驱动板各自连接。
 - U1/U2/U3 均为 SN74LXC8T245PWR。三颗 VCCA.1 均接 +3V3_A，VCCB.23/24 均接 +5V_B，GND.11/12/13 共地。U1/U2 DIR 接 VCCA，U3 DIR 接 GND。
-- 每颗芯片的三个电源脚各有就近 100 nF，入口 C10/C11 各为 1 µF。未用输入接 GND，相应输出 NC。
+- 每颗芯片的三个电源脚各有就近 100 nF，入口 C10/C11 各为 1 µF。各去耦电容及芯片 VCCA/VCCB 分别用独立短支路表达，电容各有电源和地符号，C10/C11 也各自绘制。下拉电阻及芯片接地引脚的地线局部合并。未用输入接 GND，相应输出 NC。
 - PWM_EN_A 经 R26 10 kΩ/Q1 控制 U1 OE_PWM_N。CTRL_EN_A 经 R28 10 kΩ/Q2 同时控制 U2/U3 OE_CTRL_N。两个 GPIO 各有 1 kΩ 下拉，两个低有效 OE 网各有 4.7 kΩ 上拉。GPIO 高时三极管拉低 OE，GPIO 低时禁止对应转换器。
 - 六路 PWM 由 U1 直接转换为 5 V。A/B 端分别有 100 kΩ/10 kΩ 下拉。RELCON、ENCON 高有效，两侧各有 10 kΩ 下拉，默认低。F_RESET_A 有 10 kΩ 下拉。F_RESET_B 利用驱动板已有 R106 5.1 kΩ 上拉，空闲高，低后回高在 U21 74HC74 的 CLK 产生上升沿清锁存。
 - U3 将 QEPA/QEPB/QEPZ/ERRI/ERRU 从 B→A 转换，A 输出经 R30–R34 33 Ω 至 FPGA。五路 B 输入各有 10 kΩ 下拉。ERRI/ERRU 为 U21 反相 Q 经 10 Ω 输出的低有效锁存反馈，R23/R24 的 10 kΩ 下拉用于失去驱动时的偏置，正常电平由驱动板推挽输出决定。CTRL_EN=0 时 FPGA 端反馈无效。

@@ -1,9 +1,9 @@
 {
-  "revision": "V0.3 closeout on user-arranged A3 schematic",
+  "revision": "V0.3 independent VCC and decoupling branches",
   "baselineCommit": "ef5a1906e9a2a961c73f60f2522a7a77d5fe585a",
-  "workingBaselineCommit": "e4c6efa1022eb6a5240dc99f40bc5773231a872a",
+  "workingBaselineCommit": "b87f42d3094c00d8fd396dab097f1342517a00af",
   "reviewCommentId": 6821783281,
-  "checkedUtc": "2026-11-12T11:52:07.654Z",
+  "checkedUtc": "2026-11-12T12:14:12.420Z",
   "schematicPages": 1,
   "components": 51,
   "terminals": 232,
@@ -14,7 +14,7 @@
   "terminalMappingDifferences": [],
   "pcbPadMappingDifferences": [],
   "manualInputTerminalMappingDifferences": [],
-  "userSchematicLayout": "All 51 component positions retained; C7 orientation normalized; local power/GND wiring and annotations updated",
+  "userSchematicLayout": "Each decoupling capacitor and IC power pin drawn with an independent supply stub; each capacitor including C10/C11 has a separate GND symbol; pull-down and IC ground pins remain locally grouped",
   "erc": {
     "tool": "JLCEDA 4.1.99 sch_Drc.check(true,false,true)",
     "errors": 0,
@@ -68,7 +68,7 @@
     "padNetDifferences": [],
     "physicalGeometryComparedWithInput": true,
     "physicalGeometryDifferences": [],
-    "metadataChanges": "Schematic Channel ID and equivalent C1/C4/C7 270deg to -90deg rotation representation",
+    "metadataChanges": "Saved metadata and 16 schematic Channel IDs",
     "existingPreviewImages": "Top, bottom and both 3D previews retained after physical geometry equivalence check"
   },
   "probePoints": {
@@ -82,7 +82,7 @@
     "ERRU_B": "J2.20"
   },
   "independentReadOnlyReview": {
-    "schematicAndConnectivity": "New native PNG and SVG inspected; local decoupling, grouped grounds, reset/fault notes and probe locations reviewed; no remaining necessary changes",
+    "schematicAndConnectivity": "Release PNG inspected; DIR power labels, C8 GND, U3 DIR GND and J1.39/40 net labels have clear spacing; no remaining necessary drawing changes",
     "pcbImagesAndSources": "Existing top/bottom images and source inspected; input/current physical geometry equivalent; accessible top-side probe pads confirmed"
   },
   "benchValidation": {
