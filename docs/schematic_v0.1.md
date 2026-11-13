@@ -45,4 +45,4 @@ PWM 保持原 MBDL4 的 300 Ω、1 kΩ 和共 CATH/Q7 输入电路。首版板�
 
 首版采用60 × 55 mm双层板。J1为底面Sullins SFH11-PBPC-D20-ST-BK带键2×20母座，J2为顶面Hanxia HX JN2.54-2x13P ZZ H8.9无扳扣2×13简牛，两者均2.54mm脚距、1.02mm孔径。J1以180°刚性旋转保持原针位，顶视左下为1、左上为2。J2按端子号与MBDL4对应，1脚和线缆红边有丝印标记。
 
-60 × 55 mm是本板设计尺寸。连接器厂家图、同装空间、局部间距与制造层的实际检查见[25项清单](review_checklist.md)，实体插合、叠合净高、散热器避让和固定方式待装配核对。实际ERC、DRC、逐端子结果见[检查结果](../hardware/v0.1/review/check_results.json)，图纸、预览与制造文件见[交付目录](../hardware/v0.1/)。
+60 × 55 mm是本板设计尺寸。原生BRD与实物图已核对J16位置和子板向板外伸出方向，同装X间距、局部铜隙与制造层的实际结果见[25项清单](review_checklist.md)。实体插合和支撑留首板安装确认。实际ERC、DRC、逐端子结果见[检查结果](../hardware/v0.1/review/check_results.json)，图纸、预览与制造文件见[交付目录](../hardware/v0.1/)。

@@ -2,8 +2,8 @@
   "revision": "V0.3 native Allegro assembly and final manufacturing closeout",
   "workingBaselineCommit": "b0044049b43bb705719b7fc25429f4d9a061c74b",
   "reviewCommentId": 6841252508,
-  "schematicCheckedUtc": "2026-11-13T02:56:39.052Z",
-  "pcbCheckedUtc": "2026-11-13T02:56:50.701Z",
+  "schematicCheckedUtc": "2026-11-13T03:57:22.624Z",
+  "pcbCheckedUtc": "2026-11-13T03:57:40.585Z",
   "schematicPages": 1,
   "components": 51,
   "terminals": 232,
@@ -168,12 +168,11 @@
     "modelImages": "offline z-buffer rendering of native MCP OBJ export"
   },
   "pending": [
-    "J1/J16 actual inner cavity and effective pin/contact insertion dimensions",
-    "J2 male cavity and IDC female effective contact depth",
-    "AN9238 exact near-edge Y offset and installed mating height",
-    "installed core/heatsink/fan and SMA/J2 cable clearance envelope",
-    "support and manual connector soldering process for actual assembly",
-    "future no-power bench measurements"
+    "first-board unpowered connector mating and support check",
+    "first-board ribbon continuity check",
+    "PWM load level/current/pulse width and disable-state measurements",
+    "feedback and cable-loaded crosstalk/false-trigger waveforms",
+    "independent FPGA-core power-loss transient measurement"
   ],
   "checklist": "docs/review_checklist.md",
   "pcbComponentLayoutDifferences": [],
@@ -251,10 +250,13 @@
     ],
     "an9238XOffsetBoundMm": 1.37,
     "minimumProjectedModuleGapXmm": 7.89238,
-    "projectionAssumptions": "AN pin centers remain within PCB edges; module orientation inferred from existing views and pin 1/2 matching; exact Y offset and installed Z remain unmeasured",
+    "projectionAssumptions": "AN pin centers remain within PCB edges for X offset bound. Outward direction follows pin 1/2 and existing views. Exact AN Y edge offset is unannotated; no arbitrary inward swept envelope is used.",
     "driverLibrary": "SCHLIB/PcbLib only, 26 pads and key-side numbering structurally parsed",
     "fullAssemblySignoff": false,
-    "overlay": "hardware/v0.1/review/assembly_overlay.png"
+    "overlay": "hardware/v0.1/review/assembly_overlay.png",
+    "placementReview": "User-supplied board photo and native BRD confirm upper-right J16 and outward +Y module extension. Cooling hardware is in the carrier interior.",
+    "photoBasis": "User-supplied 2026-11-13 board photograph, qualitative placement review only; no pixel-to-mm measurement.",
+    "designPlacementReviewed": true
   },
   "productionParameters": {
     "deliverable": "bare PCB",
@@ -269,10 +271,10 @@
     "finish": "lead-free HASL",
     "assembly": "manual, SMD first and connectors afterwards under supplier-approved soldering process",
     "stencil": "not selected",
-    "status": "proposed for human order review"
+    "status": "recommended for small-batch bare PCB prototyping; ordering remains with the user"
   },
-  "smallBatchReady": false,
-  "smallBatchConclusion": "Electrical mapping and fabrication geometry closed. Direct plug-in assembly dimensions remain unresolved, so no unconditional small-batch release recommendation.",
+  "smallBatchReady": true,
+  "smallBatchConclusion": "Recommend a small batch of bare PCB prototypes for subsequent no-power interface bring-up. Pin mapping, key direction, outward placement, bounded inter-board X clearance and fabrication checks are complete. Physical mating and performance remain first-board checks.",
   "minimumClearanceMm": {
     "J1Top": {
       "trackTrack": 0.130048,
@@ -303,5 +305,7 @@
     ],
     "groundStitchingImprovement": "non-blocking option",
     "crosstalkWaveforms": "first-board test"
-  }
+  },
+  "preFabricationBlockers": [],
+  "scopeCorrection": "Previous cooling/fan/cable-envelope prerequisites were over-scoped. Removed after reviewing the user photograph and verified outward J16 board placement; electrical and fabrication measurements are unchanged."
 }
