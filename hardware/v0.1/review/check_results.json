@@ -1,9 +1,9 @@
 {
-  "revision": "V0.3 J1 route B and solder-side 5 mm clearance revision",
-  "workingBaselineCommit": "9630c1efbc0cfdcca810827148c808942eecba98",
-  "reviewCommentId": 6848070170,
-  "schematicCheckedUtc": "2026-11-13T08:56:38.790Z",
-  "pcbCheckedUtc": "2026-11-13T08:56:50.450Z",
+  "revision": "V0.3 C53202170 J1 and 51-part factory PCBA",
+  "workingBaselineCommit": "e4dc6c44d6bcf6544bf7e2eeff813d0780421e27",
+  "reviewCommentId": 6849230634,
+  "schematicCheckedUtc": "2026-11-13T10:16:19.897Z",
+  "pcbCheckedUtc": "2026-11-13T10:16:25.375Z",
   "schematicPages": 1,
   "components": 51,
   "terminals": 232,
@@ -16,21 +16,26 @@
   "erc": {
     "tool": "JLCEDA 4.1.99 sch_Drc.check(true,false,true)",
     "errors": 0,
-    "warnings": 2,
+    "warnings": 3,
     "rawResult": [
       {
         "type": "warn",
         "rule": "ATTRMATCHCODE",
         "primitives": [
           {
-            "primitiveId": "9f9ed989e374f21e",
+            "primitiveId": "f9d90acb2732dc8c",
             "sheet": "59cf883581b35a24",
-            "name": "Q2($1I171)"
+            "name": "J1($1I168)"
           },
           {
             "primitiveId": "e87732bac586ed30",
             "sheet": "59cf883581b35a24",
-            "name": "Q1($1I175)"
+            "name": "Q1($1I249)"
+          },
+          {
+            "primitiveId": "9f9ed989e374f21e",
+            "sheet": "59cf883581b35a24",
+            "name": "Q2($1I250)"
           }
         ]
       }
@@ -54,6 +59,13 @@
       "catalogC81464": "SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR",
       "otherFiveFieldsMatch": true,
       "basis": "Read-only review of installed ERC implementation and native/catalog attributes. Actual pad dimensions checked against onsemi CASE318, 1=B 2=E 3=C."
+    },
+    "j1WarningExplanation": {
+      "rule": "ATTRMATCHCODE",
+      "component": "J1",
+      "actualFootprint": "HDR-TH_40P_C53202170_BOTTOM_MAP",
+      "catalogFootprint": "HDR-TH_40P-P2.54-V-F-R2-C20-S2.54-3",
+      "basis": "Project numbering for the unnumbered symmetric socket preserves all 40 existing pad positions. Native catalog drill is about 1.00 mm and body frame 50.80 mm; project uses manufacturer recommended 1.02 mm drill and 51.30 x 5.00 mm body envelope. Factory footprint/rotation preview review pending."
     }
   },
   "pcbDrc": {
@@ -79,8 +91,8 @@
     "vias": 42,
     "repoured": true,
     "j1": {
-      "mpn": "SFH11-PBPC-D20-ST-BK",
-      "lcsc": "C5909928",
+      "mpn": "254PM-2x20P-V",
+      "lcsc": "C53202170",
       "layer": "Bottom",
       "rotationDegrees": 180,
       "pads": 40,
@@ -90,7 +102,18 @@
       "pinRenumbered": false,
       "actualMinimumRingMm": 0.28975,
       "pad1Shape": "RECT",
-      "otherPadShape": "ELLIPSE"
+      "otherPadShape": "ELLIPSE",
+      "manufacturer": "LXWCONN",
+      "footprint": "HDR-TH_40P_C53202170_BOTTOM_MAP",
+      "modelUuid": "9fed69e21168452ca1065c69aef058d8",
+      "physicalKey": false,
+      "numbering": "Project-defined for unnumbered 2x20 socket; existing pad numbers and nets preserved",
+      "bodyNominalMm": [
+        51.3,
+        5,
+        8.5
+      ],
+      "tailLengthMm": 3.2
     },
     "j2": {
       "mpn": "HX JN2.54-2x13P ZZ H8.9",
@@ -104,7 +127,7 @@
       "keySlotSilkscreenMm": 4.5,
       "actualMinimumRingMm": 0.28969
     },
-    "entryCapMoveMm": 4,
+    "entryCapMoveMm": 0,
     "entryCapToJ1CopperClearanceMm": {
       "C11": 5.329977909999999,
       "C10": 5.332630806984389
@@ -316,7 +339,7 @@
     "smallCopperIslandsBelow0p01Mm2Found": false,
     "solderMaskColor": "green with white silkscreen, proposed",
     "surfaceFinish": "lead-free HASL, proposed",
-    "assemblyMethod": "Route B: factory 49 top SMT and top J2 THT (50 parts); bottom J1 factory DNP and user fit",
+    "assemblyMethod": "Factory 49 Top SMT + J2 Top THT + J1 Bottom THT; all 51 parts, DNP=0, factory order acceptance pending",
     "topMaskOpenings": 232,
     "bottomMaskOpenings": 66,
     "topAndBottomViaTentingChecked": true,
@@ -610,8 +633,8 @@
       "selection": "Exact runtime primitiveId membership, with every exclusion independently verified against installed LINE decoder pw.finish distance rule.",
       "decoder": "pw.feed divides persisted mil coordinates by 10; pw.finish returns null for Euclidean endpoint distance < 0.01 internal units, equivalent to 0.1 mil / 0.00254 mm.",
       "allExcludedIdsExactlyMatchDecoderRejections": true,
-      "maxSavedRuntimeCoordinateOrWidthDifferenceMm": 1.2000000003808963e-06,
-      "runtimeSnapshotSha256": "41f07a3a73b9bcf6426e187cef54d825a462385210a79d57ae4fccd001d2868b"
+      "maxSavedRuntimeCoordinateOrWidthDifferenceMm": 5.775291356258094e-15,
+      "runtimeSnapshotSha256": "b049219ba7db95cd90e6c02f983ce4e55c6ac30d910cc5a0e7df07fa524f90e4"
     },
     "allActiveCopperLineCamCoverage": {
       "activeLineCount": 510,
@@ -635,91 +658,18 @@
     "pcbLayerImages": "native MCP canvas exports in top-view coordinates",
     "modelImages": "offline z-buffer rendering of native MCP OBJ export",
     "sha256": {
-      "hardware/v0.1/review/J16-MBDL4_V0.3_Gerber.zip": "94e3eaf43dc47fdf85e81cd0121abfee3622d31035461dee2fbdd9ffe00bf605"
+      "hardware/v0.1/review/J16-MBDL4_V0.3_Gerber.zip": "8d9236e974670e5d57894c20727a0e053e6e81f8df749e9b9c7eb043a32a0374"
     }
   },
   "pending": [
-    "first-board unpowered connector mating and support check",
+    "first-board unpowered C53202170/J16 mating depth, orientation and all-40-pin continuity check; no physical anti-reverse key",
     "first-board ribbon continuity check",
     "PWM load level/current/pulse width and disable-state measurements",
     "feedback and cable-loaded crosstalk/false-trigger waveforms",
     "independent FPGA-core power-loss transient measurement"
   ],
   "checklist": "docs/review_checklist.md",
-  "pcbComponentLayoutDifferences": [
-    {
-      "designator": "C10",
-      "beforeMm": {
-        "x": 53.5,
-        "y": 9.500001
-      },
-      "afterMm": {
-        "x": 53.5,
-        "y": 13.500001
-      },
-      "angleAndSideUnchanged": true
-    },
-    {
-      "designator": "C11",
-      "beforeMm": {
-        "x": 6.000001,
-        "y": 9.500001
-      },
-      "afterMm": {
-        "x": 6.000001,
-        "y": 13.500001
-      },
-      "angleAndSideUnchanged": true
-    },
-    {
-      "designator": "Q1",
-      "beforeMm": {
-        "x": 21.000001,
-        "y": 12.999999
-      },
-      "afterMm": {
-        "x": 21.000001,
-        "y": 13.8
-      },
-      "angleAndSideUnchanged": true
-    },
-    {
-      "designator": "R27",
-      "beforeMm": {
-        "x": 15.499999,
-        "y": 12.999999
-      },
-      "afterMm": {
-        "x": 15.499999,
-        "y": 13.599998
-      },
-      "angleAndSideUnchanged": true
-    },
-    {
-      "designator": "R29",
-      "beforeMm": {
-        "x": 29.499999,
-        "y": 12.999999
-      },
-      "afterMm": {
-        "x": 29.499999,
-        "y": 13.599998
-      },
-      "angleAndSideUnchanged": true
-    },
-    {
-      "designator": "Q2",
-      "beforeMm": {
-        "x": 35.000001,
-        "y": 12.999999
-      },
-      "afterMm": {
-        "x": 35.000001,
-        "y": 13.8
-      },
-      "angleAndSideUnchanged": true
-    }
-  ],
+  "pcbComponentLayoutDifferences": [],
   "transistors": {
     "mpn": "MMBT3904LT1G",
     "manufacturer": "onsemi",
@@ -787,7 +737,7 @@
         "net": "+3.3V"
       }
     },
-    "keySide": "-Y toward carrier interior, matches bottom J1",
+    "keySide": "AXU J16 shroud key side toward carrier interior; selected J1 is unkeyed",
     "an9238SizeAlongHeaderAndOutwardMm": [
       51,
       81
@@ -803,7 +753,7 @@
     "designPlacementReviewed": true
   },
   "productionParameters": {
-    "deliverable": "Route B: 50 factory parts plus one user-fitted keyed J1",
+    "deliverable": "JLC supplies and assembles all 51 parts",
     "widthMm": 60,
     "heightMm": 55,
     "layers": 2,
@@ -813,29 +763,28 @@
     "solderMask": "green",
     "silkscreen": "white",
     "finish": "lead-free HASL",
-    "assembly": "49 top SMT and top J2 THT; J1 sole factory DNP",
+    "assembly": "49 Top SMT, J2 Top THT, J1 Bottom THT; DNP=0",
     "stencil": "factory production review pending",
-    "status": "Order-level 50-part matching and J2 solder-process acceptance pending",
-    "processCandidate": "economy single component-side SMT + THT",
+    "status": "51-part matching, mixed-side THT acceptance and standard production panel pending",
+    "processCandidate": "Standard, top and bottom full assembly",
     "panel": {
       "finishedBoardMm": [
         60,
         55
       ],
       "outlineChanged": false,
-      "economyPublicMinimumMm": [
-        10,
-        10
+      "standardPublicMinimumMm": [
+        70,
+        70
       ],
-      "economyPublicRequiresRails": false,
-      "economyPublicRequiresFiducials": false,
-      "mandatory70mmPanelForSelectedRoute": false,
-      "source": "https://www.jlc-smt.com/vtechnology",
-      "factoryProductionDataApproved": false
+      "factoryPanelOrRemovableProcessFrameRequiredForStandard": true,
+      "standardRequiresRailsAndFiducials": true,
+      "factoryProductionDataApproved": false,
+      "source": "https://www.jlc-smt.com/vtechnology"
     }
   },
   "smallBatchReady": false,
-  "smallBatchConclusion": "Route B files cover 50 factory parts and the sole J1 user-fit part. Order matching/J2 solder-process approval and actual keyed J1 procurement/unpowered fit are pending.",
+  "smallBatchConclusion": "C53202170 selected and all 51 parts specified for factory supply and assembly. Domestic J1 catalog stock is confirmed; this board mixed-side THT acceptance, order matching and standard production panel remain pending.",
   "minimumClearanceMm": {
     "J1Top": {
       "trackTrack": 0.130048,
@@ -873,75 +822,41 @@
     }
   },
   "preFabricationBlockers": [
-    "Factory order-level 50-part BOM/CPL matching, stock/loss allocation and top J2 solder-process acceptance",
-    "Factory confirmation of 60x55 economy production data and final assembly preview",
-    "User confirmation of exact keyed J1 procurement availability (Taobao listing and stock not yet verified)"
+    "Associate this design PCB order and complete all-51-part domestic BOM/CPL matching, stock/loss allocation and pin-1 rotation preview",
+    "Factory acceptance of Top 49 SMT + Top J2 THT + Bottom J1 THT and selection of the solder process",
+    "Factory standard production panel or removable process frame/rails/Mark engineering drawing for the 60x55 finished board"
   ],
   "scopeCorrection": "Previous cooling/fan/cable-envelope prerequisites were over-scoped. Removed after reviewing the user photograph and verified outward J16 board placement; electrical and fabrication measurements are unchanged.",
   "barePcbChecksComplete": true,
   "pcbaReview": {
-    "requirementCommentId": 6848070170,
+    "requirementCommentId": 6849230634,
     "record": "../pcba/check_results.json",
-    "factoryAssemblyRequired": 50,
-    "dnpComponents": 1,
+    "factoryAssemblyRequired": 51,
+    "dnpComponents": 0,
     "readyToOrder": false,
-    "selectedRoute": "B",
-    "userAssemblyRequired": 1,
-    "soleFactoryDnp": "J1",
+    "selectedRoute": "A",
+    "userAssemblyRequired": 0,
+    "soleFactoryDnp": null,
     "factoryOrderApprovedComponents": 0
   },
   "electricalPreservation": {
-    "schematicMatchesBaseline": true,
+    "schematicChangedOnlyForJ1MaterialAndAssociatedLibraryMetadata": true,
     "terminalMappingDifferences": [],
     "boardOutlineMatchesBaseline": true,
-    "footprintGeometryMatchesBaseline": true,
+    "other50ComponentParametersAndPositionsMatchBaseline": true,
+    "j1PadNumbersCentersCopperDrillsAndNetsMatchBaseline": true,
     "converterFunctionsParametersAndInterfaceNetsChanged": false
   },
   "routingRevision": {
     "lineChanges": {
-      "added": [
-        "45006808bf9440c2",
-        "2b493c14c010e8f6"
-      ],
-      "removed": [
-        "8ed0166945cbdfb9",
-        "4115df773223dc45"
-      ],
-      "modified": [
-        "477eb15c0c1e1b19",
-        "b12d8c709195ff78",
-        "f561c5f3175ff41b",
-        "ecd30183ff7ffd9c",
-        "24e8d0b184c9c087",
-        "340d11be84f9c0b5",
-        "b481403de56d727c",
-        "abbf78193eb48e4d",
-        "8edf743409924aa2",
-        "afb3a1a285962e1f",
-        "ec9611d4e2a594c9",
-        "1c3881c7fc50e680",
-        "c45c9a61865ca2c3",
-        "b5b06fa9f474974b",
-        "a3e22a0f185b8710",
-        "7014f115bf9c8491",
-        "5eae39c7b612c4c3",
-        "5e42f6a047357bef",
-        "10b426f6fc05afdf",
-        "f64a63b7beaa2a10",
-        "66076e99c6dc3283",
-        "a5456434f771fead",
-        "abe0819dcee14950"
-      ]
+      "added": [],
+      "removed": [],
+      "modified": []
     },
     "viaChanges": {
-      "added": [
-        "8b9eedd163774fbc",
-        "42ed7e2a5e8ff395"
-      ],
+      "added": [],
       "removed": [],
-      "modified": [
-        "aad3a3bf5584267c"
-      ]
+      "modified": []
     },
     "entryCapacitorConnections": {
       "C10": {
@@ -997,6 +912,7 @@
         "1": 7,
         "2": 2
       }
-    }
+    },
+    "metadataChannelIdsSynchronized": 27
   }
 }
