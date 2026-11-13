@@ -1,0 +1,59 @@
+{
+  "baselineCommit": "3a4d9008e898f1c4a37af9f72166d6402a3eb5b8",
+  "requirement": "JLC supplies and assembles all 51 components",
+  "bomComponents": 51,
+  "cplComponents": 51,
+  "factoryAssemblyRequired": 51,
+  "dnpComponents": 0,
+  "topSmt": 49,
+  "topTht": 1,
+  "bottomTht": 1,
+  "uniqueMaterials": 11,
+  "internationalCatalogEnabledComponents": 51,
+  "internationalStockPositiveComponentsAtCheck": 50,
+  "chinaOrderApprovedComponents": 0,
+  "wholeBoardProcessAccepted": false,
+  "pcbaReadyToOrder": false,
+  "singleBoardMm": [
+    60,
+    55
+  ],
+  "productionPanelApproved": false,
+  "cplConvention": "Native EDA mm, top-view XY for both sides, native rotation modulo 360",
+  "chinaPlatformObservation": {
+    "j1CatalogMatched": true,
+    "j1StockDisplayed": 0,
+    "j2CatalogMatched": true,
+    "matchingPrerequisite": "Select a matching PCB order before BOM/CPL upload",
+    "currentDesignPcbOrderSelected": false
+  },
+  "cplAgainstLiveMcpDifferences": [],
+  "bomAgainstNativeMcpDifferences": [],
+  "pending": [
+    "J1 supply",
+    "factory approval for top SMT plus top and bottom THT",
+    "J1 PBT post-reflow soldering and adjacent C10/C11 clearance",
+    "factory panel or carrier >=70x70mm with rails, fiducials and tooling",
+    "China order matching, rotation/first-pin preview and all-51 assembly acceptance"
+  ],
+  "j1SolderSideClearance": {
+    "C10": {
+      "j1PadToShape48BodyMm": 1.6408723922019937,
+      "nearestJ1PadToBody": "40",
+      "j1PadToSmtPadMm": 1.3375722799602534,
+      "nearestPadPair": [
+        "J1.40",
+        "C10.1"
+      ]
+    },
+    "C11": {
+      "j1PadToShape48BodyMm": 1.6300030900000007,
+      "nearestJ1PadToBody": "2",
+      "j1PadToSmtPadMm": 1.3299782900000003,
+      "nearestPadPair": [
+        "J1.2",
+        "C11.1"
+      ]
+    }
+  }
+}

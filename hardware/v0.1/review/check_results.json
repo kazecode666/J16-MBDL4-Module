@@ -153,7 +153,7 @@
     "smallCopperIslandsBelow0p01Mm2Found": false,
     "solderMaskColor": "green with white silkscreen, proposed",
     "surfaceFinish": "lead-free HASL, proposed",
-    "assemblyMethod": "bare PCB and subsequent manual assembly, proposed",
+    "assemblyMethod": "superseded by full factory PCBA requirement; see ../pcba/README.md",
     "topMaskOpenings": 232,
     "bottomMaskOpenings": 66,
     "topAndBottomViaTentingChecked": true,
@@ -259,7 +259,7 @@
     "designPlacementReviewed": true
   },
   "productionParameters": {
-    "deliverable": "bare PCB",
+    "deliverable": "JLC full turnkey PCBA, all 51 components",
     "widthMm": 60,
     "heightMm": 55,
     "layers": 2,
@@ -269,12 +269,12 @@
     "solderMask": "green",
     "silkscreen": "white",
     "finish": "lead-free HASL",
-    "assembly": "manual, SMD first and connectors afterwards under supplier-approved soldering process",
-    "stencil": "not selected",
-    "status": "recommended for small-batch bare PCB prototyping; ordering remains with the user"
+    "assembly": "factory top SMT plus top J2 and bottom J1 THT; engineering approval pending",
+    "stencil": "factory stencil process review pending",
+    "status": "PCBA material supply and mixed-side assembly approval pending"
   },
-  "smallBatchReady": true,
-  "smallBatchConclusion": "Recommend a small batch of bare PCB prototypes for subsequent no-power interface bring-up. Pin mapping, key direction, outward placement, bounded inter-board X clearance and fabrication checks are complete. Physical mating and performance remain first-board checks.",
+  "smallBatchReady": false,
+  "smallBatchConclusion": "Current target is all-51-component turnkey PCBA. J1 supply, mixed-side THT soldering and standard-type production panel remain pending factory review.",
   "minimumClearanceMm": {
     "J1Top": {
       "trackTrack": 0.130048,
@@ -306,6 +306,18 @@
     "groundStitchingImprovement": "non-blocking option",
     "crosstalkWaveforms": "first-board test"
   },
-  "preFabricationBlockers": [],
-  "scopeCorrection": "Previous cooling/fan/cable-envelope prerequisites were over-scoped. Removed after reviewing the user photograph and verified outward J16 board placement; electrical and fabrication measurements are unchanged."
+  "preFabricationBlockers": [
+    "PCBA J1 material supply",
+    "PCBA mixed-side SMT/THT factory acceptance",
+    "PCBA standard-type production panel and complete order matching"
+  ],
+  "scopeCorrection": "Previous cooling/fan/cable-envelope prerequisites were over-scoped. Removed after reviewing the user photograph and verified outward J16 board placement; electrical and fabrication measurements are unchanged.",
+  "barePcbChecksComplete": true,
+  "pcbaReview": {
+    "requirementCommentId": 6845780688,
+    "record": "../pcba/check_results.json",
+    "factoryAssemblyRequired": 51,
+    "dnpComponents": 0,
+    "readyToOrder": false
+  }
 }
