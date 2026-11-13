@@ -1,0 +1,187 @@
+{
+  "baselineCommit": "e4dc6c44d6bcf6544bf7e2eeff813d0780421e27",
+  "requirementCommentId": 6849230634,
+  "selectedRoute": "A",
+  "routeDescription": "51 factory supplied and assembled, C53202170, DNP=0",
+  "selectedJ1": {
+    "mpn": "254PM-2x20P-V",
+    "manufacturer": "LXWCONN(连兴旺电子)",
+    "designLibraryLCSC": "C53202170",
+    "footprint": "HDR-TH_40P_C53202170_BOTTOM_MAP",
+    "mount": "Bottom",
+    "rotationDegrees": 180,
+    "physicalKey": false,
+    "factoryDnp": false,
+    "userSupplyAndFitRequired": false,
+    "manufacturerDrawingDefinesPinNumbers": false,
+    "numberingBasis": "Board-local bottom-map variant preserves all 40 existing board pad numbers and centers",
+    "pitchMm": 2.54,
+    "rows": 2,
+    "positionsPerRow": 20,
+    "recommendedHoleMm": 1.02,
+    "currentBoardHoleMm": 1.02,
+    "padDiameterMm": 1.6,
+    "plasticBodyNominalMm": [
+      51.3,
+      5.0,
+      8.5
+    ],
+    "tailLengthMm": 3.2,
+    "keyPinChecks": {
+      "1": {
+        "nominalTopViewMm": [
+          5.87,
+          3.73
+        ],
+        "runtimeMm": [
+          5.86994,
+          3.73126
+        ],
+        "net": "GND"
+      },
+      "2": {
+        "nominalTopViewMm": [
+          5.87,
+          6.27
+        ],
+        "runtimeMm": [
+          5.86994,
+          6.27126
+        ],
+        "net": "+5V_B"
+      },
+      "39": {
+        "nominalTopViewMm": [
+          54.13,
+          3.73
+        ],
+        "runtimeMm": [
+          54.12994,
+          3.73126
+        ],
+        "net": "+3V3_A"
+      },
+      "40": {
+        "nominalTopViewMm": [
+          54.13,
+          6.27
+        ],
+        "runtimeMm": [
+          54.12994,
+          6.27126
+        ],
+        "net": "+3V3_A"
+      }
+    },
+    "physicalMatingCheck": "First board, unpowered"
+  },
+  "designComponents": 51,
+  "bomComponents": 51,
+  "cplComponents": 51,
+  "factoryAssemblyRequired": 51,
+  "userAssemblyRequired": 0,
+  "dnpComponents": 0,
+  "factoryDnpReferences": [],
+  "topSmt": 49,
+  "topTht": 1,
+  "bottomTht": 1,
+  "uniqueDesignMaterials": 11,
+  "uniqueFactoryMaterials": 11,
+  "chinaCatalogStockPositiveComponentsAtCurrentCheck": 1,
+  "internationalStockPositiveComponentsAtPreviousCheck": 50,
+  "materialStockRecordScope": "J1 China logged-in catalog UI observed 18:07 local, minute precision. Other ten material rows preserve historical international sources and UTC times. Order stock allocation pending.",
+  "chinaOrderApprovedComponents": 0,
+  "factory51PartProcessAccepted": false,
+  "pcbaReadyToOrder": false,
+  "singleBoardMm": [
+    60,
+    55
+  ],
+  "factoryServiceCandidate": "Standard, top SMT plus top and bottom THT",
+  "publishedStandardMinimumMm": [
+    70,
+    70
+  ],
+  "productionPanelReviewRequired": true,
+  "processRailsRequiredByPublishedStandardGeneralLimits": true,
+  "fiducialsRequiredByPublishedStandardGeneralLimits": true,
+  "finishedBoardOutlineChanged": false,
+  "capabilitySource": "https://www.jlc-smt.com/vtechnology",
+  "handSolderRuleSource": "https://www.jlc.com/portal/server_guide_21925.html",
+  "mixedSideProcessPublicRuleConflictUnresolved": true,
+  "orderEntryChecked": {
+    "source": "https://www.jlc-smt.com/order",
+    "bothSidesAndStandardOptionsObserved": true,
+    "projectPcbOrderAvailable": false,
+    "availableSelectionAtCheck": "SMT workflow demonstration Y1 only",
+    "matchingPrerequisite": "Select this design PCB order before quantity and BOM/CPL matching",
+    "explicitDesignRejectionObserved": false
+  },
+  "cplConvention": "Native EDA mm, top-view XY for both sides, native rotation modulo 360",
+  "cplAgainstLiveMcpDifferences": [],
+  "bomAgainstNativeMcpDifferences": [],
+  "liveChecks": {
+    "pcbCheckedUtc": "2026-11-13T10:16:25.375Z",
+    "schematicCheckedUtc": "2026-11-13T10:16:19.897Z",
+    "ercErrors": 0,
+    "ercWarnings": 3,
+    "ercWarningRule": "ATTRMATCHCODE",
+    "ercWarningComponents": [
+      "J1",
+      "Q1",
+      "Q2"
+    ],
+    "pcbDrcErrors": 0,
+    "pcbDrcWarnings": 0,
+    "unroutedConnections": 0,
+    "terminals": 232,
+    "terminalMappingDifferences": [],
+    "vias": 42,
+    "combinedPlatedDrillHoles": 108
+  },
+  "ercWarningExplanation": {
+    "J1": "Project BOTTOM_MAP footprint preserves the board numbering and 1.02 mm holes with 51.3 mm body, checked against the manufacturer drawing. Catalog footprint differs in name, 1.00 mm hole and 50.8 mm body. Order footprint and bottom-side orientation review pending.",
+    "Q1_Q2": "Existing SOT-23 footprint-name mismatch, previously checked against onsemi pin assignment and land-pattern dimensions"
+  },
+  "j1TopSolderSideClearance": {
+    "checkedUtc": "2026-11-13T10:17:24.020102+00:00",
+    "smtCount": 49,
+    "minimumMm": 5.228377909999998,
+    "all49AtLeast5mm": true,
+    "method": "Planar native PCB geometry. J1 top through-hole copper and solder-mask openings to all top SMT body (layer48), copper pads and mask openings. GND connectivity uses only exact live runtime LINE primitive IDs, with installed decoder exclusions independently verified. Distances in mm. 128-quadrant circle approximation.",
+    "layoutMovedThisRevision": false
+  },
+  "selectedJ1DomesticCatalog": {
+    "lcsc": "C53202170",
+    "stockAtCheck": 271,
+    "observedLocalTime": "2026-11-13 18:07 Asia/Shanghai",
+    "observationPrecision": "minute",
+    "library": "expand",
+    "assemblyProcess": "THT",
+    "source": "https://www.jlc-smt.com/lcsc/detail/C53202170.html",
+    "orderStockReserved": false
+  },
+  "firstBoardChecks": [
+    "Unpowered J1/J16 insertion and all 40 same-number continuity checks before power",
+    "Verify pin 1 GND, pin 2 +5V, pins 39/40 +3.3V and absence of power-rail shorts"
+  ],
+  "pending": [
+    "JLC order-level 51-part stock allocation and top SMT plus top/bottom THT process acceptance",
+    "Standard-service production panel, rails, fiducials and final assembly preview approval"
+  ],
+  "fallbackActive": false,
+  "revisedGerberIndependentCamVerified": true,
+  "gerberCam": {
+    "source": "hardware/v0.1/review/J16-MBDL4_V0.3_Gerber.zip",
+    "combinedDrills": 108,
+    "viaSubset": 42,
+    "activeCopperLines": 510,
+    "activeCopperLinesWithExplicitGerberMatch": 510,
+    "nativeRejectedDegenerateLineRecords": 24,
+    "connectorLocalMinimumChecks": 12,
+    "allPassed": true,
+    "thtPasteIntersections": [],
+    "smdPadsWithoutPaste": [],
+    "record": "../review/check_results.json"
+  }
+}

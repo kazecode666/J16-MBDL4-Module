@@ -1,12 +1,16 @@
 # J16—MBDL4 数字接口板
 
-为 AXU5EVB-E J16 与 MBDL4 建立专用数字接口板设计依据。当前阶段为 DOC-01 资料基线，正式设计仍需解决已登记的电气与版本问题。
+AXU5EVB-E J16—MBDL4 专用 3.3 V/5 V 数字接口板，V0.3 交付单页 A3 原理图与首版双层 PCB。
 
-- [设计依据](docs/design_basis.md)
-- [逐份资料索引与 SHA-256](docs/reference_index.md)
-- [接口证据及原始页码](docs/interface_evidence.md)
-- [下一步原理图的待确认项](docs/open_questions.md)
+- [嘉立创 EDA 工程、原理图及 PCB 预览](hardware/v0.1/)
+- [引脚连接表](hardware/v0.1/pin_connections.csv)
+- [51 件 BOM](hardware/v0.1/bom.csv)
+- [PCBA装配检查、BOM、CPL及装配图](hardware/v0.1/pcba/)
+- [供电、OE 与默认状态](docs/schematic_v0.1.md)
+- [设计依据](docs/design_basis.md)、[参考资料索引](docs/reference_index.md)、[接口证据](docs/interface_evidence.md)
+- [样机待验证项目](docs/open_questions.md)
+- [25项统一审查清单](docs/review_checklist.md)
 
-本轮完成资料复制、版本区分、证据提取和缺件登记。原件归档于 Git 忽略的 `.local/references/`，精确本地来源见 `.local/manifest.json`。公开仓库仅提交原创摘要和来源索引。ALINX 原理图带 Confidential 标记，TI 文件含再发布限制，其余厂家资料的公开授权尚未取得。
+按最新设计决定，J1采用连兴旺254PM-2x20P-V/C53202170无凸键底装排母，目标为嘉立创供料并完成底面J1、顶面J2及49件顶面SMT共51件装配，DNP为0。C10/C11及邻近4件元件已局部调整，J1顶面焊盘/阻焊开窗至全部49件SMT本体/焊盘/开窗的最小净距为5.22838mm。成品保持60×55mm，按底装插件与顶面SMT/插件混合装配提交工艺审核。标准型70×70mm下限所需工艺拼板或可拆工艺框、51件订单匹配及本单受理仍待厂家确认。J1实际插合列首板实测。[J1选型及装配说明](hardware/v0.1/pcba/j1_selection.md)、[最新设计决定](https://github.com/kazecode666/J16-MBDL4-Module/pull/4#issuecomment-6849230634)
 
-对应 [Issue #1](https://github.com/kazecode666/J16-MBDL4-Module/issues/1)，分支 `docs/reference-baseline`。2026-11-11 核查远端为空，已用最小 README 和 .gitignore 建立 main 初始提交 `36e2d06`。资料整理通过 Draft PR 交付，合并由用户决定。
+厂家原件保存在 Git 忽略的 `.local/references/`。公开权限不明的原件继续仅保留本地，仓库提供必要来源与页码。
