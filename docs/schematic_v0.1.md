@@ -8,6 +8,7 @@
 - U1/U2/U3 均为 SN74LXC8T245PWR。三颗 VCCA.1 均接 +3V3_A，VCCB.23/24 均接 +5V_B，GND.11/12/13 共地。U1/U2 DIR 接 VCCA，U3 DIR 接 GND。
 - 每颗芯片的三个电源脚各有就近 100 nF，入口 C10/C11 各为 1 µF。图面上去耦电容与芯片拉开间距，电容各有独立电源和地符号，C10/C11 也各自绘制。同一芯片的相同电源引脚局部合并，通过 +3V3_A、+5V_B 电源网络标识连接。U3 DIR 地符号朝上，下拉电阻及芯片接地引脚的地线局部合并。未用输入接 GND，相应输出 NC。
 - PWM_EN_A 经 R26 10 kΩ/Q1 控制 U1 OE_PWM_N。CTRL_EN_A 经 R28 10 kΩ/Q2 同时控制 U2/U3 OE_CTRL_N。两个 GPIO 各有 1 kΩ 下拉，两个低有效 OE 网各有 4.7 kΩ 上拉。GPIO 高时三极管拉低 OE，GPIO 低时禁止对应转换器。
+- Q1/Q2使用onsemi MMBT3904LT1G/C81464，原厂1=B、2=E、3=C。现有SOT-23焊盘尺寸已按CASE318核对并保留，工程两条封装标题属性警告的依据见25项清单。
 - 六路 PWM 由 U1 直接转换为 5 V。A/B 端分别有 100 kΩ/10 kΩ 下拉。RELCON、ENCON 高有效，两侧各有 10 kΩ 下拉，默认低。F_RESET_A 有 10 kΩ 下拉。F_RESET_B 利用驱动板已有 R106 5.1 kΩ 上拉，空闲高，低后回高在 U21 74HC74 的 CLK 产生上升沿清锁存。
 - U3 将 QEPA/QEPB/QEPZ/ERRI/ERRU 从 B→A 转换，A 输出经 R30–R34 33 Ω 至 FPGA。五路 B 输入各有 10 kΩ 下拉。ERRI/ERRU 为 U21 反相 Q 经 10 Ω 输出的低有效锁存反馈，R23/R24 的 10 kΩ 下拉用于失去驱动时的偏置，正常电平由驱动板推挽输出决定。CTRL_EN=0 时 FPGA 端反馈无效。
 - 驱动板 U22 按原理图 74HC08D 接线，ERR=ERRI AND ERRU，继电器内部命令=RELCON AND ERR，Q7 允许=ENCON AND ERR。R90 47 Ω 跨继电器触点，继电器断开时仍保留预充路径。

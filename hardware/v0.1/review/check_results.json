@@ -1,9 +1,9 @@
 {
-  "revision": "V0.3 checklist25 connector and manufacturing review",
-  "workingBaselineCommit": "5622d723678aabfbb25a1281caaadcfec4442f0a",
-  "reviewCommentId": 6824768128,
-  "schematicCheckedUtc": "2026-11-12T14:39:48.167Z",
-  "pcbCheckedUtc": "2026-11-12T14:40:21.169Z",
+  "revision": "V0.3 native Allegro assembly and final manufacturing closeout",
+  "workingBaselineCommit": "b0044049b43bb705719b7fc25429f4d9a061c74b",
+  "reviewCommentId": 6841252508,
+  "schematicCheckedUtc": "2026-11-13T02:56:39.052Z",
+  "pcbCheckedUtc": "2026-11-13T02:56:50.701Z",
   "schematicPages": 1,
   "components": 51,
   "terminals": 232,
@@ -16,8 +16,45 @@
   "erc": {
     "tool": "JLCEDA 4.1.99 sch_Drc.check(true,false,true)",
     "errors": 0,
-    "warnings": 0,
-    "rawResult": []
+    "warnings": 2,
+    "rawResult": [
+      {
+        "type": "warn",
+        "rule": "ATTRMATCHCODE",
+        "primitives": [
+          {
+            "primitiveId": "9f9ed989e374f21e",
+            "sheet": "59cf883581b35a24",
+            "name": "Q2($1I171)"
+          },
+          {
+            "primitiveId": "e87732bac586ed30",
+            "sheet": "59cf883581b35a24",
+            "name": "Q1($1I175)"
+          }
+        ]
+      }
+    ],
+    "warningExplanation": {
+      "rule": "ATTRMATCHCODE",
+      "components": [
+        "Q1",
+        "Q2"
+      ],
+      "comparedFields": [
+        "Supplier Part",
+        "Supplier",
+        "Comment",
+        "Footprint",
+        "Manufacturer Part",
+        "Manufacturer"
+      ],
+      "differentField": "Footprint",
+      "actual": "SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR",
+      "catalogC81464": "SOT-23-3_L2.9-W1.6-P1.90-LS2.8-BR",
+      "otherFiveFieldsMatch": true,
+      "basis": "Read-only review of installed ERC implementation and native/catalog attributes. Actual pad dimensions checked against onsemi CASE318, 1=B 2=E 3=C."
+    }
   },
   "pcbDrc": {
     "tool": "JLCEDA 4.1.99 pcb_Drc.check(true,false,true)",
@@ -48,9 +85,12 @@
       "rotationDegrees": 180,
       "pads": 40,
       "drillMm": 1.02,
-      "padDiameterMm": 1.5,
-      "nominalAnnularRingMm": 0.24,
-      "pinRenumbered": false
+      "padDiameterMm": 1.6,
+      "nominalAnnularRingMm": 0.29,
+      "pinRenumbered": false,
+      "actualMinimumRingMm": 0.28975,
+      "pad1Shape": "RECT",
+      "otherPadShape": "ELLIPSE"
     },
     "j2": {
       "mpn": "HX JN2.54-2x13P ZZ H8.9",
@@ -61,29 +101,39 @@
       "drillMm": 1.02001,
       "circularPadDiameterMm": 1.6,
       "nominalAnnularRingMm": 0.29,
-      "keySlotSilkscreenMm": 4.5
+      "keySlotSilkscreenMm": 4.5,
+      "actualMinimumRingMm": 0.28969
     },
-    "entryCapMoveMm": 1,
+    "entryCapMoveMm": 0,
     "entryCapToJ1CopperClearanceMm": {
-      "C10": 1.3876,
-      "C11": 1.38
+      "C10": 1.3376,
+      "C11": 1.33
     },
     "minimumSmallComponentBodyClearanceMm": 0.82,
     "copperToBoardEdgeMinimumMm": 0.5,
     "drillEdgeSpacingMinimumMm": 0.84785,
-    "drillEdgeToBoardMinimumMm": 3.22
+    "drillEdgeToBoardMinimumMm": 3.22,
+    "entryCapYmm": {
+      "C10": 9.5,
+      "C11": 9.5
+    },
+    "signalSegmentsNarrowed": {
+      "count": 6,
+      "fromMm": 0.254,
+      "toMm": 0.2032,
+      "centerlinesUnchanged": true
+    },
+    "ruleMinimumTrackSpacingMm": 0.127,
+    "ruleMinimumTrackWidthMm": 0.127,
+    "rulePadToTrackSpacingMm": 0.15200122
   },
   "independentReview": {
-    "actualSchematicPngViewed": true,
-    "actualPcbPngViewed": true,
-    "actual3dPreviewsViewed": true,
     "readOnlyAgents": true,
     "edaEditsByMainAgentOnly": true,
-    "findingsFixed": [
-      "J1 bottom silk moved outside housing and key",
-      "project device model associations and transforms corrected",
-      "J2 key slot silkscreen corrected to 4.5mm"
-    ]
+    "nativeAllegroAndLibraryRead": true,
+    "nativeCopperMeasured": true,
+    "actualFinalSixPanelCamViewed": true,
+    "exactCatalogWarningCauseVerified": true
   },
   "manufacturingReview": {
     "actualGerberIndependentlyParsed": true,
@@ -99,27 +149,159 @@
     "tentedVias": 40,
     "tssopCopperGapMm": 0.286,
     "tssopMaskBridgeMm": 0.1844,
-    "nativeHoleToGerberCenterMaxDifferenceMm": 0.000185,
+    "nativeHoleToGerberCenterMaxDifferenceMm": 0.00134,
     "smallCopperIslandsBelow0p01Mm2Found": false,
-    "solderMaskColor": "not specified",
-    "surfaceFinish": "not specified",
-    "assemblyMethod": "not selected"
+    "solderMaskColor": "green with white silkscreen, proposed",
+    "surfaceFinish": "lead-free HASL, proposed",
+    "assemblyMethod": "bare PCB and subsequent manual assembly, proposed",
+    "topMaskOpenings": 232,
+    "bottomMaskOpenings": 66,
+    "topAndBottomViaTentingChecked": true,
+    "nativeCopperToGerberClearanceMaxDifferenceMm": 0.00006143,
+    "custom0603PasteShapes": 66,
+    "nativePasteToCamHausdorffDifferenceMm": 0.00000669
   },
   "exports": {
     "schematicPdf": "one landscape A3 page from native 4096px PNG",
     "schematicSvg": "native editable vector export",
     "pcbLayerImages": "native MCP canvas exports in top-view coordinates",
-    "modelImages": "offline z-buffer rendering of actual native MCP OBJ export; native ray-tracer init timed out"
+    "modelImages": "offline z-buffer rendering of native MCP OBJ export"
   },
   "pending": [
-    "Q1/Q2 exact manufacturer B/E/C pin drawing",
-    "AXU J16 internal dimensions, exposed pin length and connector pin-1 mating orientation",
-    "J2 and keyed IDC cable female contact overlap and insertion depth",
-    "AXU5EVB-E plus AN9238 simultaneous XY/Z installation and cable/heatsink envelopes",
-    "mechanical support under connector insertion forces",
-    "solder mask color, surface finish and assembly method",
-    "external analog harness and labels",
+    "J1/J16 actual inner cavity and effective pin/contact insertion dimensions",
+    "J2 male cavity and IDC female effective contact depth",
+    "AN9238 exact near-edge Y offset and installed mating height",
+    "installed core/heatsink/fan and SMA/J2 cable clearance envelope",
+    "support and manual connector soldering process for actual assembly",
     "future no-power bench measurements"
   ],
-  "checklist": "docs/review_checklist.md"
+  "checklist": "docs/review_checklist.md",
+  "pcbComponentLayoutDifferences": [],
+  "transistors": {
+    "mpn": "MMBT3904LT1G",
+    "manufacturer": "onsemi",
+    "lcsc": "C81464",
+    "pins": {
+      "1": "B",
+      "2": "E",
+      "3": "C"
+    },
+    "landPattern": {
+      "padSizeMm": [
+        1,
+        0.65
+      ],
+      "columnCenterSpacingMm": 2,
+      "rowCenterSpacingMm": 1.9
+    },
+    "datasheet": "https://www.onsemi.com/pdf/datasheet/mmbt3904lt1-d.pdf"
+  },
+  "assembly": {
+    "reader": "BoardRipper native Allegro binary parser, KiCad-derived",
+    "readerCommit": "4dac140756dc7484e1a3907082efc05ac1e57f38",
+    "readerWarnings": [],
+    "sourceFile": "AXU5EVB-E_Allegro_PCB.brd",
+    "carrierSizeMm": [
+      159.99714,
+      99.9998
+    ],
+    "j15CenterMm": [
+      47.61738,
+      94.26956
+    ],
+    "j16CenterMm": [
+      112.37976,
+      94.26956
+    ],
+    "centerSpacingMm": 64.76238,
+    "j16Pins": {
+      "1": {
+        "xy": [
+          88.24976,
+          92.99956
+        ],
+        "net": "GND"
+      },
+      "2": {
+        "xy": [
+          88.24976,
+          95.53956
+        ],
+        "net": "+5V"
+      },
+      "39": {
+        "xy": [
+          136.50976,
+          92.99956
+        ],
+        "net": "+3.3V"
+      },
+      "40": {
+        "xy": [
+          136.50976,
+          95.53956
+        ],
+        "net": "+3.3V"
+      }
+    },
+    "keySide": "-Y toward carrier interior, matches bottom J1",
+    "an9238SizeAlongHeaderAndOutwardMm": [
+      51,
+      81
+    ],
+    "an9238XOffsetBoundMm": 1.37,
+    "minimumProjectedModuleGapXmm": 7.89238,
+    "projectionAssumptions": "AN pin centers remain within PCB edges; module orientation inferred from existing views and pin 1/2 matching; exact Y offset and installed Z remain unmeasured",
+    "driverLibrary": "SCHLIB/PcbLib only, 26 pads and key-side numbering structurally parsed",
+    "fullAssemblySignoff": false,
+    "overlay": "hardware/v0.1/review/assembly_overlay.png"
+  },
+  "productionParameters": {
+    "deliverable": "bare PCB",
+    "widthMm": 60,
+    "heightMm": 55,
+    "layers": 2,
+    "material": "FR4",
+    "nominalThicknessMm": 1.6,
+    "copperOz": 1,
+    "solderMask": "green",
+    "silkscreen": "white",
+    "finish": "lead-free HASL",
+    "assembly": "manual, SMD first and connectors afterwards under supplier-approved soldering process",
+    "stencil": "not selected",
+    "status": "proposed for human order review"
+  },
+  "smallBatchReady": false,
+  "smallBatchConclusion": "Electrical mapping and fabrication geometry closed. Direct plug-in assembly dimensions remain unresolved, so no unconditional small-batch release recommendation.",
+  "minimumClearanceMm": {
+    "J1Top": {
+      "trackTrack": 0.130048,
+      "trackPad": 0.1548,
+      "allCopper": 0.130048
+    },
+    "J1Bottom": {
+      "trackTrack": 0.142465,
+      "trackPad": 0.204459,
+      "allCopper": 0.142465
+    },
+    "J2Top": {
+      "trackTrack": 0.596643,
+      "trackPad": 0.209291,
+      "allCopper": 0.209291
+    },
+    "J2Bottom": {
+      "trackTrack": 0.978268,
+      "trackPad": 0.342862,
+      "allCopper": 0.342862
+    }
+  },
+  "returnPathReview": {
+    "groundPadsConnected": 62,
+    "nonGroundLayerChangeToNearestGroundTieMm": [
+      1.66,
+      8.25
+    ],
+    "groundStitchingImprovement": "non-blocking option",
+    "crosstalkWaveforms": "first-board test"
+  }
 }
