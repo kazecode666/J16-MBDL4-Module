@@ -1,59 +1,136 @@
 {
-  "baselineCommit": "3a4d9008e898f1c4a37af9f72166d6402a3eb5b8",
-  "requirement": "JLC supplies and assembles all 51 components",
-  "bomComponents": 51,
-  "cplComponents": 51,
-  "factoryAssemblyRequired": 51,
-  "dnpComponents": 0,
+  "baselineCommit": "9630c1efbc0cfdcca810827148c808942eecba98",
+  "requirementCommentId": 6848070170,
+  "selectedRoute": "B",
+  "selectedJ1": {
+    "mpn": "SFH11-PBPC-D20-ST-BK",
+    "designLibraryLCSC": "C5909928",
+    "mount": "Bottom",
+    "rotationDegrees": 180,
+    "physicalKey": true,
+    "factoryDnp": true,
+    "userSupplyAndFitRequired": true
+  },
+  "designComponents": 51,
+  "bomComponents": 50,
+  "cplComponents": 50,
+  "factoryAssemblyRequired": 50,
+  "userAssemblyRequired": 1,
+  "dnpComponents": 1,
+  "factoryDnpReferences": [
+    "J1"
+  ],
   "topSmt": 49,
   "topTht": 1,
-  "bottomTht": 1,
-  "uniqueMaterials": 11,
-  "internationalCatalogEnabledComponents": 51,
-  "internationalStockPositiveComponentsAtCheck": 50,
+  "bottomUserTht": 1,
+  "uniqueDesignMaterials": 11,
+  "uniqueFactoryMaterials": 10,
+  "internationalCatalogEnabledDesignComponentsAtPreviousCheck": 51,
+  "internationalStockPositiveFactoryComponentsAtPreviousCheck": 50,
+  "materialStockRecordScope": "Historical catalog snapshots with per-row UTC timestamps, final China order supply pending",
   "chinaOrderApprovedComponents": 0,
-  "wholeBoardProcessAccepted": false,
+  "factory50PartProcessAccepted": false,
   "pcbaReadyToOrder": false,
   "singleBoardMm": [
     60,
     55
   ],
-  "productionPanelApproved": false,
+  "factoryServiceCandidate": "Economic, single-side top SMT plus top J2 THT",
+  "publishedEconomicMinimumMm": [
+    10,
+    10
+  ],
+  "panelRequiredByPublishedEconomicGeneralLimits": false,
+  "processRailsRequiredByPublishedEconomicGeneralLimits": false,
+  "fiducialsRequiredByPublishedEconomicGeneralLimits": false,
+  "economicCapabilitySource": "https://www.jlc-smt.com/vtechnology",
   "cplConvention": "Native EDA mm, top-view XY for both sides, native rotation modulo 360",
-  "chinaPlatformObservation": {
-    "j1CatalogMatched": true,
-    "j1StockDisplayed": 0,
-    "j2CatalogMatched": true,
-    "matchingPrerequisite": "Select a matching PCB order before BOM/CPL upload",
-    "currentDesignPcbOrderSelected": false
-  },
   "cplAgainstLiveMcpDifferences": [],
   "bomAgainstNativeMcpDifferences": [],
-  "pending": [
-    "J1 supply",
-    "factory approval for top SMT plus top and bottom THT",
-    "J1 PBT post-reflow soldering and adjacent C10/C11 clearance",
-    "factory panel or carrier >=70x70mm with rails, fiducials and tooling",
-    "China order matching, rotation/first-pin preview and all-51 assembly acceptance"
-  ],
-  "j1SolderSideClearance": {
-    "C10": {
-      "j1PadToShape48BodyMm": 1.6408723922019937,
-      "nearestJ1PadToBody": "40",
-      "j1PadToSmtPadMm": 1.3375722799602534,
-      "nearestPadPair": [
-        "J1.40",
-        "C10.1"
-      ]
+  "liveChecks": {
+    "pcbCheckedUtc": "2026-11-13T08:56:50.450Z",
+    "schematicCheckedUtc": "2026-11-13T08:56:38.790Z",
+    "ercErrors": 0,
+    "ercWarnings": 2,
+    "ercWarningRule": "ATTRMATCHCODE",
+    "ercWarningComponents": [
+      "Q1",
+      "Q2"
+    ],
+    "pcbDrcErrors": 0,
+    "pcbDrcWarnings": 0,
+    "unroutedConnections": 0,
+    "terminals": 232,
+    "terminalMappingDifferences": [],
+    "vias": 42,
+    "combinedPlatedDrillHoles": 108
+  },
+  "j1TopSolderSideClearance": {
+    "checkedUtc": "2026-11-13T09:12:12.101391+00:00",
+    "smtCount": 49,
+    "minimumMm": 5.228377909999998,
+    "all49AtLeast5mm": true,
+    "method": "Planar native PCB geometry. J1 top through-hole copper and solder-mask openings to all top SMT body (layer48), copper pads and mask openings. GND connectivity uses only exact live runtime LINE primitive IDs, with installed decoder exclusions independently verified. Distances in mm. 128-quadrant circle approximation.",
+    "movedReferences": [
+      "C10",
+      "C11",
+      "Q1",
+      "R27",
+      "R29",
+      "Q2"
+    ]
+  },
+  "unkeyedCandidates": [
+    {
+      "lcsc": "C5124634",
+      "mpn": "2.54-2*20P",
+      "manufacturer": "BOOMELE",
+      "domesticPcbaStockAtCheck": 7479,
+      "domesticObservedLocalTime": "2026-11-13 16:45 Asia/Shanghai",
+      "domesticCatalogSource": "https://www.jlc-smt.com/lcsc/detail/C5124634.html",
+      "recommendedHoleMm": 1.1,
+      "currentBoardHoleMm": 1.02,
+      "selected": false,
+      "openMatingDimensions": [
+        "AXU J16 cavity and effective pin length",
+        "female effective contact depth"
+      ],
+      "datasheetSource": "https://atta.szlcsc.com/upload/public/pdf/source/20221227/C943B6E3BC1E1384B123D6A43A7CD369.pdf"
     },
-    "C11": {
-      "j1PadToShape48BodyMm": 1.6300030900000007,
-      "nearestJ1PadToBody": "2",
-      "j1PadToSmtPadMm": 1.3299782900000003,
-      "nearestPadPair": [
-        "J1.2",
-        "C11.1"
-      ]
+    {
+      "lcsc": "C53202170",
+      "mpn": "254PM-2x20P-V",
+      "manufacturer": "LXWCONN",
+      "domesticPcbaStockAtCheck": 271,
+      "domesticObservedLocalTime": "2026-11-13 16:45 Asia/Shanghai",
+      "domesticCatalogSource": "https://www.jlc-smt.com/lcsc/detail/C53202170.html",
+      "recommendedHoleMm": 1.02,
+      "currentBoardHoleMm": 1.02,
+      "selected": false,
+      "openMatingDimensions": [
+        "AXU J16 cavity and effective pin length",
+        "female effective contact depth"
+      ],
+      "datasheetSource": "https://www.lcsc.com/datasheet/C53202170.pdf"
     }
+  ],
+  "pending": [
+    "JLC acceptance of the 50 top-side components including J2, final China stock, rotation and finish options",
+    "User-procured keyed J1 dimensions and unpowered dry-fit before user soldering"
+  ],
+  "revisedGerberIndependentCamVerified": true,
+  "gerberCam": {
+    "combinedDrills": 108,
+    "viaSubset": 42,
+    "activeCopperLines": 510,
+    "activeCopperLinesWithExplicitGerberMatch": 510,
+    "nativeRejectedDegenerateLineRecords": 24,
+    "nativeRejectionThresholdMm": 0.00254,
+    "connectorLocalMinimumChecks": 12,
+    "allPassed": true,
+    "nativeVsCamLocalGapMaxDifferenceMm": 1.420000003804489e-06,
+    "allSMT166PadsHavePaste": true,
+    "thtPasteIntersections": [],
+    "record": "../review/check_results.json"
   }
 }

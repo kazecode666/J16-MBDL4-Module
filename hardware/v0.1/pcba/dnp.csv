@@ -1,0 +1,2 @@
+﻿Designator,Manufacturer Part,Footprint,DesignLibraryLCSC,QuantityPerBoard,Layer,Rotation,Factory DNP,User Fit,User Supply,Reason
+J1,SFH11-PBPC-D20-ST-BK,HDR-TH_20P-P2.54_SFH11-PBPC-D20-ST-BK,C5909928,1,Bottom,180,Yes,Required after PCBA,Keyed board-solder socket with verified dimensions and orientation,Route B keyed J1 retained for user fit while unkeyed mating evidence remains open
