@@ -1,0 +1,96 @@
+{
+  "name": "J16-MBDL4 V0.3",
+  "owner_uuid": "9cc553c739c8405bb4e2f8f03699cd23",
+  "creator_uuid": "9cc553c739c8405bb4e2f8f03699cd23",
+  "created_at": "2026-11-11 22:37:45",
+  "updated_at": "2026-11-11 22:37:45",
+  "modifier_uuid": "9cc553c739c8405bb4e2f8f03699cd23",
+  "content": "V0.3 J16—MBDL4 兼容接口板样机，单页A3原理图与双层PCB",
+  "archive": false,
+  "cbb_project": 0,
+  "thumb": "",
+  "ticket": 1,
+  "g_ticket": 1,
+  "boards": [],
+  "block_symbol_attrs_groups": {},
+  "default_sheet": "aff8d9bc23158916",
+  "branch_uuid": "",
+  "pcb_count": 0,
+  "format": "folder",
+  "profile": {
+    "boards": {
+      "00aab8b9f495a1dd": {
+        "uuid": "00aab8b9f495a1dd",
+        "title": "Board1",
+        "zIndex": 1
+      }
+    },
+    "schematics": {
+      "fb37557aba75df82": {
+        "uuid": "fb37557aba75df82",
+        "name": "J16-MBDL4",
+        "board": "00aab8b9f495a1dd",
+        "source": "",
+        "version": "1794564875264",
+        "updateTime": 1794564875264
+      }
+    },
+    "sheets": {
+      "59cf883581b35a24": {
+        "uuid": "59cf883581b35a24",
+        "title": "总原理图_A3",
+        "schematic_uuid": "fb37557aba75df82",
+        "zIndex": 5,
+        "source": "",
+        "version": "1794564875264",
+        "updateTime": 1794564875264
+      }
+    },
+    "pcbs": {
+      "a5268c55721b527f": {
+        "uuid": "a5268c55721b527f",
+        "title": "PCB1",
+        "board": "00aab8b9f495a1dd",
+        "parent_uuid": "",
+        "source": "",
+        "version": "1794564929579",
+        "updateTime": 1794564929579
+      }
+    },
+    "panels": {
+      "4f935a7365182bb2": {
+        "uuid": "4f935a7365182bb2",
+        "title": "Panel1",
+        "zIndex": null
+      }
+    },
+    "blockSymbols": {},
+    "owner": {
+      "uuid": "9cc553c739c8405bb4e2f8f03699cd23"
+    },
+    "simSchematics": {},
+    "simulations": {}
+  },
+  "config": {
+    "defaultSheet": "aff8d9bc23158916",
+    "settings": {
+      "UNIVERSAL": {
+        "dataType": "UNIVERSAL",
+        "data": {
+          "allowLibRename": true,
+          "defaultNetName": true,
+          "wireMultipleNet": true,
+          "netFlagCrossLayerConnection": true,
+          "netLabelCrossPageConnection": true,
+          "busGenerateNetClass": true,
+          "relevanceDisplayRow": "SINGLE",
+          "relevanceBelongSchPage": "NAME",
+          "relevanceLocation": "ZONE",
+          "multipartCrossLayer": true,
+          "nonElectronicAddIntoBom": false,
+          "nonElectronicUpdatePcb": false
+        }
+      }
+    }
+  }
+}
