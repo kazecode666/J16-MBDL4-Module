@@ -1,16 +1,20 @@
-# J16—MBDL4 数字接口板
+# J16—MBDL4 数字接口板 V0.3
 
-AXU5EVB-E J16—MBDL4 专用 3.3 V/5 V 数字接口板，V0.3 交付单页 A3 原理图与首版双层 PCB。
+AXU5EVB-E 的 J16 与 MBDL4 的 PWM 数字口之间使用本板完成 3.3 V/5 V 电平转换。V0.3 采用单页 A3 原理图与双层 PCB，设计资料沿用仓库目录名 `hardware/v0.1/`。J15 上的 AN9238 另行接收 MBDL4 模拟口的电流采样信号。
 
-- [嘉立创 EDA 工程、原理图及 PCB 预览](hardware/v0.1/)
-- [引脚连接表](hardware/v0.1/pin_connections.csv)
-- [51 件 BOM](hardware/v0.1/bom.csv)
-- [PCBA装配检查、BOM、CPL及装配图](hardware/v0.1/pcba/)
-- [供电、OE 与默认状态](docs/schematic_v0.1.md)
-- [设计依据](docs/design_basis.md)、[参考资料索引](docs/reference_index.md)、[接口证据](docs/interface_evidence.md)
-- [样机待验证项目](docs/open_questions.md)
-- [25项统一审查清单](docs/review_checklist.md)
+14 路业务信号分为 6 路 PWM、3 路控制输出和 5 路反馈。另有两路板内使能，U1 使用独立的 `PWM_EN`，U2/U3 共用 `CTRL_EN`。
 
-按最新设计决定，J1采用连兴旺254PM-2x20P-V/C53202170无凸键底装排母，目标为嘉立创供料并完成底面J1、顶面J2及49件顶面SMT共51件装配，DNP为0。C10/C11及邻近4件元件已局部调整，J1顶面焊盘/阻焊开窗至全部49件SMT本体/焊盘/开窗的最小净距为5.22838mm。成品保持60×55mm，按底装插件与顶面SMT/插件混合装配提交工艺审核。标准型70×70mm下限所需工艺拼板或可拆工艺框、51件订单匹配及本单受理仍待厂家确认。J1实际插合列首板实测。[J1选型及装配说明](hardware/v0.1/pcba/j1_selection.md)、[最新设计决定](https://github.com/kazecode666/J16-MBDL4-Module/pull/4#issuecomment-6849230634)
+## 首板状态
 
-厂家原件保存在 Git 忽略的 `.local/references/`。公开权限不明的原件继续仅保留本地，仓库提供必要来源与页码。
+- **装配**。设计资料保留原 51 件全厂装方案。首板实际由厂家装配顶面的 49 件 SMT 和 J2，用户自行焊接 J1 并已插入 J16。自购 J1 的精确型号待核实。[实际装配说明](hardware/v0.1/pcba/)
+- **空载静态测试**（`USER_REPORTED`）。用户确认 6 路 PWM、3 路控制输出和 QEPA 一路反馈在记录条件下通过。QEPB、QEPZ、ERRI、ERRU 只观察到默认低，尚待外部高电平逐路验证。[首板空载静态测试记录](docs/writing/interface_board_static_test_record.md)
+- **后续验收**。MBDL4 数字口联调、动态 PWM 与死区、真实驱动器负载、编码器计数、故障与继电器动作、掉电瞬态和电机运动仍待验证。[样机待验证项目](docs/open_questions.md)
+
+## 资料入口
+
+- [设计交付与可编辑 EDA 工程](hardware/v0.1/) · [总原理图](hardware/v0.1/review/schematic_A3.png) · [引脚连接表](hardware/v0.1/pin_connections.csv)
+- [电路与默认状态](docs/schematic_v0.1.md) · [25 项设计审查清单](docs/review_checklist.md) · [接口依据与资料页码](docs/interface_evidence.md)
+- [AXU5EV VIO 静态测试工程](https://github.com/kazecode666/AXU5EV/blob/main/hardware/axu5ev/j16_level_test/README.md) · [论文审阅背景](docs/writing/interface_board_review_context.md) · [两节论文待审原稿](docs/writing/interface_board_draft_sections.md)
+- [设计依据](docs/design_basis.md) · [参考资料索引](docs/reference_index.md)
+
+公开权限不明的厂家原件保留在 Git 忽略的 `.local/references/`。
